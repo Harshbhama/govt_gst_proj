@@ -1,0 +1,434 @@
+{
+    "insert": [
+        {
+            "pos": "Jammu",
+            "state_cd": 15,
+            "add_rt": 0,
+            "sup_typ": "InterState",
+            "val": [
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                }
+            ]
+        },
+        {
+            "pos": "Jammu",
+            "state_cd": 15,
+            "add_rt": 0,
+            "sup_typ": "InterState",
+            "val": [
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                }
+            ]
+        },
+        {
+            "pos": "Jammu",
+            "state_cd": 15,
+            "add_rt": 0,
+            "sup_typ": "InterState",
+            "val": [
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                }
+            ]
+        },
+        {
+            "pos": "Jammu",
+            "state_cd": 15,
+            "add_rt": 0,
+            "sup_typ": "InterState",
+            "val": [
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                }
+            ]
+        },
+        {
+            "pos": "Jammu",
+            "state_cd": 15,
+            "add_rt": 0,
+            "sup_typ": "InterState",
+            "val": [
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                }
+            ]
+        },
+        {
+            "pos": "Jammu",
+            "state_cd": 15,
+            "add_rt": 0,
+            "sup_typ": "InterState",
+            "val": [
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                }
+            ]
+        },
+        {
+            "pos": "Jammu",
+            "state_cd": 15,
+            "add_rt": 0,
+            "sup_typ": "InterState",
+            "val": [
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                }
+            ]
+        },
+        {
+            "pos": "Jammu",
+            "state_cd": 15,
+            "add_rt": 0,
+            "sup_typ": "InterState",
+            "val": [
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                }
+            ]
+        },
+        {
+            "pos": "Jammu",
+            "state_cd": 15,
+            "add_rt": 0,
+            "sup_typ": "InterState",
+            "val": [
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                }
+            ]
+        },
+        {
+            "pos": "Jammu",
+            "state_cd": 15,
+            "add_rt": 0,
+            "sup_typ": "InterState",
+            "val": [
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                },
+                {
+                    "tax_val": 1000.00,
+                    "igst": 100.00,
+                    "cgst": 0.00,
+                    "sgst": 0.00,
+                    "cess": 0.00
+                }
+            ]
+        }
+    ]
+}

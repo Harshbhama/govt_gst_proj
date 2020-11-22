@@ -1,0 +1,3267 @@
+{
+  "additionalProperties": false,
+  "anyOf": [
+    {
+      "required": [
+        "b2b"
+      ]
+    },
+    {
+      "required": [
+        "b2c"
+      ]
+    },
+    {
+      "required": [
+        "de"
+      ]
+    },
+    {
+      "required": [
+        "ecom"
+      ]
+    },
+    {
+      "required": [
+        "expwop"
+      ]
+    },
+    {
+      "required": [
+        "expwp"
+      ]
+    },
+    {
+      "required": [
+        "impg"
+      ]
+    },
+    {
+      "required": [
+        "impgsez"
+      ]
+    },
+    {
+      "required": [
+        "imps"
+      ]
+    },
+    {
+      "required": [
+        "mis"
+      ]
+    },
+    {
+      "required": [
+        "rev"
+      ]
+    },
+    {
+      "required": [
+        "sezwop"
+      ]
+    },
+    {
+      "required": [
+        "sezwp"
+      ]
+    },
+    {
+      "required": [
+        "b2ba"
+      ]
+    },
+    {
+      "required": [
+        "sezwopa"
+      ]
+    },
+    {
+      "required": [
+        "sezwpa"
+      ]
+    },
+	{
+      "required": [
+        "dea"
+      ]
+    }
+  ],
+  "definitions": {
+    "amt": {
+      "maximum": 9999999999999.99,
+      "minimum": 0,
+      "multipleOf": 0.01,
+      "type": "number"
+    },
+    "b2bctin": {
+      "anyOf": [
+        {
+          "maxLength": 15,
+          "minLength": 15,
+          "pattern": "[0-9]{2}[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[Zz1-9A-Ja-j]{1}[0-9a-zA-Z]{1}",
+          "type": "string",
+          "description": "GSTIN"
+        },
+        {
+          "maxLength": 15,
+          "minLength": 15,
+          "pattern": "[0-9]{4}[A-Z]{3}[0-9]{5}[UO]{1}[N][A-Z0-9]{1}",
+          "type": "string",
+          "description": "UN/ON Body"
+        },
+        {
+          "maxLength": 15,
+          "minLength": 15,
+          "pattern": "[0-9]{4}[a-zA-Z]{3}[0-9]{5}[N][R][0-9a-zA-Z]{1}",
+          "type": "string",
+          "description": "NRI"
+        },
+        {
+          "maxLength": 15,
+          "minLength": 15,
+          "pattern": "[0-9]{2}[a-zA-Z]{4}[a-zA-Z0-9]{1}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[DK]{1}[0-9a-zA-Z]{1}",
+          "type": "string",
+          "description": "TDS"
+        },
+        {
+          "maxLength": 15,
+          "minLength": 15,
+          "pattern": "[0-9]{2}[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[C]{1}[0-9a-zA-Z]{1}",
+          "type": "string",
+          "description": "TCS"
+        }
+      ]
+    },
+    "trdnm": {
+      "maxLength": 99,
+      "minLength": 0,
+      "type": "string"
+    },
+    "errMsg": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "errCd": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "boenum": {
+      "maxLength": 16,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9-/]+$",
+      "type": "string"
+    },
+    "boolean": {
+      "enum": [
+        "N",
+        "Y"
+      ],
+      "type": "string"
+    },
+    "cess": {
+      "maximum": 9999999999999.99,
+      "minimum": 0,
+      "multipleOf": 0.01,
+      "type": "number"
+    },
+    "cfs": {
+      "enum": [
+        "F",
+        "NF"
+      ],
+      "type": "string"
+    },
+    "cgst": {
+      "maximum": 9999999999999.99,
+      "minimum": 0,
+      "multipleOf": 0.01,
+      "type": "number"
+    },
+    "chksum": {
+      "maxLength": 64,
+      "minLength": 64,
+      "pattern": "^[a-zA-Z0-9]+$",
+      "type": "string"
+    },
+    "ctin": {
+      "anyOf": [
+        {
+          "maxLength": 15,
+          "minLength": 15,
+          "pattern": "[0-9]{2}[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[Zz1-9A-Ja-j]{1}[0-9a-zA-Z]{1}",
+          "type": "string"
+        }
+      ]
+    },
+    "date": {
+      "minLength": 1,
+      "pattern": "^(0[1-9]|1[0-9]|2[0-8]|29((?=-([0][13-9]|1[0-2])|(?=-(0[1-9]|1[0-2])\/([0-9]{2}(0[48]|[13579][26]|[2468][048])|([02468][048]|[13579][26])00))))|30(?=-(0[13-9]|1[0-2]))|31(?=-(0[13578]|1[02])))\/(0[1-9]|1[0-2])\/[0-9]{4}$",
+      "type": "string"
+    },
+    "diffprcnt": {
+      "enum": [
+        0.65,
+        1.00,
+        1
+      ],
+      "type": "number"
+    },
+    "doctyp": {
+      "enum": [
+        "C",
+        "D",
+        "I"
+      ],
+      "type": "string"
+    },
+    "odoctyp": {
+      "type": "string",
+      "enum": [
+        "I",
+        "C",
+        "D"
+      ]
+    },
+    "amdtyp": {
+      "type": "string",
+      "enum": [
+        "G",
+        "D",
+        "O"
+      ]
+    },
+    "aprd": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^((0[1-9]|1[012])((19|20)\\d\\d))$"
+    },
+    "oprd": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^((0[1-9]|1[012])((19|20)\\d\\d))$"
+    },
+    "oetin": {
+      "type": "string",
+      "maxLength": 15,
+      "minLength": 15,
+      "pattern": "[0-9]{2}[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[C]{1}[0-9a-zA-Z]{1}"
+    },
+    "amended": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "etin": {
+      "maxLength": 15,
+      "minLength": 15,
+      "pattern": "[0-9]{2}[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[C]{1}[0-9a-zA-Z]{1}",
+      "type": "string"
+    },
+    "etinEmptyChck": {
+      "maxLength": 0,
+      "minLength": 0,
+      "type": "string"
+    },
+    "flag": {
+      "enum": [
+        "N",
+        "U"
+      ],
+      "type": "string"
+    },
+    "gstin": {
+      "maxLength": 15,
+      "minLength": 15,
+      "pattern": "[0-9]{2}[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[Zz1-9A-Ja-j]{1}[0-9a-zA-Z]{1}",
+      "type": "string"
+    },
+    "issez": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N",
+        "y",
+        "n"
+      ]
+    },
+    "frq": {
+      "type": "string",
+      "enum": [
+        "M",
+        "Q",
+        "m",
+        "q"
+      ]
+    },
+    "profile": {
+      "type": "string",
+      "enum": [
+        "SM",
+        "SJ",
+        "MN",
+        "QN",
+        "sj",
+        "sm",
+        "mn",
+        "qn"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "action": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "headerAction": {
+      "type": "string",
+      "minLength": 1
+    },
+    "doc_status": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "hsn": {
+      "maxLength": 8,
+      "minLength": 4,
+      "pattern": "^[0-9]*$",
+      "type": "string"
+    },
+    "igst": {
+      "maximum": 9999999999999.99,
+      "minimum": 0,
+      "multipleOf": 0.01,
+      "type": "number"
+    },
+    "impgdoctyp": {
+      "enum": [
+        "B"
+      ],
+      "type": "string"
+    },
+    "impshsn": {
+      "maxLength": 8,
+      "minLength": 6,
+      "pattern": "^99[0-9]*$",
+      "type": "string"
+    },
+    "negamt": {
+      "maximum": 9999999999999.99,
+      "minimum": -9999999999999.99,
+      "multipleOf": 0.01,
+      "type": "number"
+    },
+    "negcess": {
+      "maximum": 9999999999999.99,
+      "minimum": -9999999999999.99,
+      "multipleOf": 0.01,
+      "type": "number"
+    },
+    "negcgst": {
+      "maximum": 9999999999999.99,
+      "minimum": -9999999999999.99,
+      "multipleOf": 0.01,
+      "type": "number"
+    },
+    "negigst": {
+      "maximum": 9999999999999.99,
+      "minimum": -9999999999999.99,
+      "multipleOf": 0.01,
+      "type": "number"
+    },
+    "negsgst": {
+      "maximum": 9999999999999.99,
+      "minimum": -9999999999999.99,
+      "multipleOf": 0.01,
+      "type": "number"
+    },
+    "negtxval": {
+      "maximum": 9999999999999.99,
+      "minimum": -9999999999999.99,
+      "multipleOf": 0.01,
+      "type": "number"
+    },
+    "nonEmptyString": {
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9]*$",
+      "type": "string"
+    },
+    "num": {
+      "maxLength": 16,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9-/]+$",
+      "type": "string"
+    },
+    "pan": {
+      "maxLength": 10,
+      "minLength": 10,
+      "pattern": "[A-Z]{5}[0-9]{4}[A-Z]{1}",
+      "type": "string"
+    },
+    "pcode": {
+      "maxLength": 6,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9]+$",
+      "type": "string"
+    },
+    "pos": {
+      "maxLength": 2,
+      "minLength": 2,
+      "pattern": "^(3[0-7]|[12][0-9]|0[1-9]|97)$",
+      "type": "string"
+    },
+    "postxval": {
+      "maximum": 9999999999999.99,
+      "minimum": 0.01,
+      "multipleOf": 0.01,
+      "type": "number"
+    },
+    "rate": {
+      "maximum": 999.9,
+      "minimum": 0,
+      "multipleOf": 0.01,
+      "type": "number"
+    },
+    "revctintypeG": {
+      "enum": [
+        "G"
+      ],
+      "type": "string"
+    },
+    "revctintypeP": {
+      "enum": [
+        "P"
+      ],
+      "type": "string"
+    },
+    "revsupplytyp": {
+      "enum": [
+        "inter",
+        "intra"
+      ],
+      "type": "string"
+    },
+    "rtnprd": {
+      "minLength": 1,
+      "pattern": "^((0[1-9]|1[012])((19|20)\\d\\d))$",
+      "type": "string"
+    },
+    "sgst": {
+      "maximum": 9999999999999.99,
+      "minimum": 0,
+      "multipleOf": 0.01,
+      "type": "number"
+    },
+    "tblref": {
+      "enum": [
+        "3B",
+        "3E",
+        "3F",
+        "3G"
+      ],
+      "type": "string"
+    },
+    "txval": {
+      "maximum": 9999999999999.99,
+      "minimum": 0,
+      "multipleOf": 0.01,
+      "type": "number"
+    }
+  },
+  "properties": {
+    "b2b": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "ctin": {
+            "$ref": "#/definitions/b2bctin",
+            "description": "Counterparty GSTIN"
+          },
+          "trdnm": {
+            "$ref": "#/definitions/trdnm",
+            "description": "Trade/Legal Name"
+          },
+          "docs": {
+            "items": {
+              "additionalProperties": false,
+              "anyOf": [
+                {
+                  "required": [
+                    "doc",
+                    "doctyp",
+                    "flag"
+                  ]
+                },
+                {
+                  "required": [
+                    "doc",
+                    "doctyp",
+                    "items",
+                    "pos"
+                  ]
+                }
+              ],
+              "properties": {
+                "chksum": {
+                  "$ref": "#/definitions/chksum",
+                  "description": "CheckSum"
+                },
+                "recipientType": {
+                  "type": "string",
+                  "description": "Recipient Type"
+                },
+                "diffprcnt": {
+                  "$ref": "#/definitions/diffprcnt",
+                  "description": "differential percentage"
+                },
+                "doc": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "dt": {
+                      "$ref": "#/definitions/date",
+                      "description": "Document date"
+                    },
+                    "num": {
+                      "$ref": "#/definitions/num",
+                      "description": "Document number"
+                    },
+                    "val": {
+                      "$ref": "#/definitions/amt",
+                      "description": "Document value"
+                    }
+                  },
+                  "required": [
+                    "dt",
+                    "num",
+                    "val"
+                  ],
+                  "type": "object"
+                },
+                "doctyp": {
+                  "$ref": "#/definitions/doctyp",
+                  "description": "type of document"
+                },
+                "flag": {
+                  "description": "Delete flag",
+                  "enum": [
+                    "D"
+                  ],
+                  "type": "string"
+                },
+                "action": {
+                  "description": "Action",
+                  "$ref": "#/definitions/action"
+                },
+                "uplddt": {
+                  "description": "Upload date",
+                  "$ref": "#/definitions/date"
+                },
+                "errorDetails": {
+                  "additionalProperties": true,
+                  "required": [
+                    "errMsg",
+                    "errCd"
+                  ],
+                  "properties": {
+                    "errMsg": {
+                      "$ref": "#/definitions/errMsg",
+                      "description": "Error Message"
+                    },
+                    "errCd": {
+                      "$ref": "#/definitions/errCd",
+                      "description": "Error Code"
+                    }
+                  },
+                  "type": "object"
+                },
+                "items": {
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "cess": {
+                        "$ref": "#/definitions/cess",
+                        "description": "Cess (₹)"
+                      },
+                      "cgst": {
+                        "$ref": "#/definitions/cgst",
+                        "description": "Central Tax (₹)"
+                      },
+                      "hsn": {
+                        "$ref": "#/definitions/hsn",
+                        "description": "HSN code"
+                      },
+                      "igst": {
+                        "$ref": "#/definitions/igst",
+                        "description": "Integrated Tax (₹)"
+                      },
+                      "rate": {
+                        "$ref": "#/definitions/rate",
+                        "description": "Rate (%)"
+                      },
+                      "sgst": {
+                        "$ref": "#/definitions/sgst",
+                        "description": "State/UT Tax (₹)"
+                      },
+                      "txval": {
+                        "$ref": "#/definitions/txval",
+                        "description": "Taxable Value (₹)"
+                      }
+                    },
+                    "required": [
+                      "rate",
+                      "txval"
+                    ],
+                    "type": "object"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "pos": {
+                  "$ref": "#/definitions/pos",
+                  "description": "Place of Supply(Name of State/UT)"
+                },
+                "rfndelg": {
+                  "$ref": "#/definitions/boolean",
+                  "description": "Refund eligibility"
+                },
+                "sec7act": {
+                  "$ref": "#/definitions/boolean",
+                  "description": "Supply Covered Under Sec 7 of IGST Act"
+                }
+              },
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "ctin",
+          "docs"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "b2c": {
+      "items": {
+        "additionalProperties": false,
+        "anyOf": [
+          {
+            "required": [
+              "flag",
+              "pos"
+            ]
+          },
+          {
+            "required": [
+              "items",
+              "pos"
+            ]
+          }
+        ],
+        "properties": {
+          "diffprcnt": {
+            "$ref": "#/definitions/diffprcnt",
+            "description": "differential percentage"
+          },
+          "flag": {
+            "description": "Delete flag",
+            "enum": [
+              "D"
+            ],
+            "type": "string"
+          },
+          "items": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "cess": {
+                  "$ref": "#/definitions/negcess",
+                  "description": "Cess (₹)"
+                },
+                "cgst": {
+                  "$ref": "#/definitions/negcgst",
+                  "description": "Central Tax (₹)"
+                },
+                "igst": {
+                  "$ref": "#/definitions/negigst",
+                  "description": "Integrated Tax (₹)"
+                },
+                "rate": {
+                  "$ref": "#/definitions/rate",
+                  "description": "Rate (%)"
+                },
+                "sgst": {
+                  "$ref": "#/definitions/negsgst",
+                  "description": "State/UT Tax (₹)"
+                },
+                "txval": {
+                  "$ref": "#/definitions/negtxval",
+                  "description": "Taxable Value (₹)"
+                }
+              },
+              "required": [
+                "rate",
+                "txval"
+              ],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "pos": {
+            "$ref": "#/definitions/pos",
+            "description": "Place of Supply(Name of State/UT)"
+          },
+          "rfndelg": {
+            "$ref": "#/definitions/boolean",
+            "description": "Refund eligibility"
+          },
+          "sec7act": {
+            "$ref": "#/definitions/boolean",
+            "description": "Supply Covered Under Sec 7 of IGST Act"
+          },
+          "chksum": {
+            "$ref": "#/definitions/chksum",
+            "description": "CheckSum"
+          },
+          "action": {
+            "description": "Action",
+            "$ref": "#/definitions/action"
+          },
+          "uplddt": {
+            "description": "Upload date",
+            "$ref": "#/definitions/date"
+          },
+          "errorDetails": {
+            "additionalProperties": true,
+            "required": [
+              "errMsg",
+              "errCd"
+            ],
+            "properties": {
+              "errMsg": {
+                "$ref": "#/definitions/errMsg",
+                "description": "Error Message"
+              },
+              "errCd": {
+                "$ref": "#/definitions/errCd",
+                "description": "Error Code"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "de": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "ctin": {
+            "$ref": "#/definitions/ctin",
+            "description": "Counterparty GSTIN"
+          },
+          "trdnm": {
+            "$ref": "#/definitions/trdnm",
+            "description": "Trade/Legal Name"
+          },
+          "docs": {
+            "items": {
+              "additionalProperties": false,
+              "anyOf": [
+                {
+                  "required": [
+                    "clmrfnd",
+                    "doc",
+                    "doctyp",
+                    "items",
+                    "pos"
+                  ]
+                },
+                {
+                  "required": [
+                    "doc",
+                    "doctyp",
+                    "flag"
+                  ]
+                }
+              ],
+              "properties": {
+                "chksum": {
+                  "$ref": "#/definitions/chksum",
+                  "description": "CheckSum"
+                },
+                "recipientType": {
+                  "type": "string",
+                  "description": "Recipient Type"
+                },
+                "clmrfnd": {
+                  "$ref": "#/definitions/boolean",
+                  "description": "Claim Refund"
+                },
+                "diffprcnt": {
+                  "$ref": "#/definitions/diffprcnt",
+                  "description": "differential percentage"
+                },
+                "doc": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "dt": {
+                      "$ref": "#/definitions/date",
+                      "description": "Document date"
+                    },
+                    "num": {
+                      "$ref": "#/definitions/num",
+                      "description": "Document number"
+                    },
+                    "val": {
+                      "$ref": "#/definitions/amt",
+                      "description": "Document value"
+                    }
+                  },
+                  "required": [
+                    "dt",
+                    "num",
+                    "val"
+                  ],
+                  "type": "object"
+                },
+                "doctyp": {
+                  "$ref": "#/definitions/doctyp",
+                  "description": "type of document"
+                },
+                "flag": {
+                  "description": "Upload action",
+                  "enum": [
+                    "D"
+                  ],
+                  "type": "string"
+                },
+                "items": {
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "cess": {
+                        "$ref": "#/definitions/cess",
+                        "description": "Cess (₹)"
+                      },
+                      "cgst": {
+                        "$ref": "#/definitions/cgst",
+                        "description": "Central Tax (₹)"
+                      },
+                      "hsn": {
+                        "$ref": "#/definitions/hsn",
+                        "description": "HSN code"
+                      },
+                      "igst": {
+                        "$ref": "#/definitions/igst",
+                        "description": "Integrated Tax (₹)"
+                      },
+                      "rate": {
+                        "$ref": "#/definitions/rate",
+                        "description": "Rate (%)"
+                      },
+                      "sgst": {
+                        "$ref": "#/definitions/sgst",
+                        "description": "State/UT Tax (₹)"
+                      },
+                      "txval": {
+                        "$ref": "#/definitions/txval",
+                        "description": "Taxable Value (₹)"
+                      }
+                    },
+                    "required": [
+                      "hsn",
+                      "rate",
+                      "txval"
+                    ],
+                    "type": "object"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "action": {
+                  "description": "Action",
+                  "$ref": "#/definitions/action"
+                },
+                "uplddt": {
+                  "description": "Upload date",
+                  "$ref": "#/definitions/date"
+                },
+                "errorDetails": {
+                  "additionalProperties": true,
+                  "required": [
+                    "errMsg",
+                    "errCd"
+                  ],
+                  "properties": {
+                    "errMsg": {
+                      "$ref": "#/definitions/errMsg",
+                      "description": "Error Message"
+                    },
+                    "errCd": {
+                      "$ref": "#/definitions/errCd",
+                      "description": "Error Code"
+                    }
+                  },
+                  "type": "object"
+                },
+                "pos": {
+                  "$ref": "#/definitions/pos",
+                  "description": "Place of Supply(Name of State/UT)"
+                },
+                "rfndelg": {
+                  "$ref": "#/definitions/boolean",
+                  "description": "Refund eligibility"
+                },
+                "sec7act": {
+                  "$ref": "#/definitions/boolean",
+                  "description": "Supply Covered Under Sec 7 of IGST Act"
+                }
+              },
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "ctin",
+          "docs"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "ecom": {
+      "items": {
+        "additionalProperties": false,
+        "anyOf": [
+          {
+            "required": [
+              "etin",
+              "flag"
+            ]
+          },
+          {
+            "required": [
+              "etin",
+              "nsup",
+              "sup",
+              "supr"
+            ]
+          }
+        ],
+        "properties": {
+          "errorDetails": {
+            "additionalProperties": true,
+            "required": [
+              "errMsg",
+              "errCd"
+            ],
+            "properties": {
+              "errMsg": {
+                "$ref": "#/definitions/errMsg",
+                "description": "Error Message"
+              },
+              "errCd": {
+                "$ref": "#/definitions/errCd",
+                "description": "Error Code"
+              }
+            },
+            "type": "object"
+          },
+          "action": {
+            "description": "Action",
+            "$ref": "#/definitions/action"
+          },
+          "uplddt": {
+            "description": "Upload date",
+            "$ref": "#/definitions/date"
+          },
+          "cess": {
+            "$ref": "#/definitions/negcess",
+            "description": "Cess (₹)"
+          },
+          "cgst": {
+            "$ref": "#/definitions/negcgst",
+            "description": "Central Tax (₹)"
+          },
+          "etin": {
+            "$ref": "#/definitions/etin",
+            "description": "E-commerce GSTIN"
+          },
+          "trdnm": {
+            "$ref": "#/definitions/trdnm",
+            "description": "Trade/Legal Name"
+          },
+          "chksum": {
+            "$ref": "#/definitions/chksum",
+            "description": "CheckSum"
+          },
+          "flag": {
+            "description": "Upload action",
+            "enum": [
+              "D"
+            ],
+            "type": "string"
+          },
+          "igst": {
+            "$ref": "#/definitions/negigst",
+            "description": "Integrated Tax (₹)"
+          },
+          "nsup": {
+            "$ref": "#/definitions/negamt",
+            "description": "net supplied amount"
+          },
+          "sgst": {
+            "$ref": "#/definitions/negsgst",
+            "description": "State/UT Tax (₹)"
+          },
+          "sup": {
+            "$ref": "#/definitions/amt",
+            "description": "supplied amount"
+          },
+          "supr": {
+            "$ref": "#/definitions/amt",
+            "description": "supplies returned amount"
+          }
+        },
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "expwop": {
+      "items": {
+        "additionalProperties": false,
+        "anyOf": [
+          {
+            "required": [
+              "doc",
+              "doctyp",
+              "flag"
+            ]
+          },
+          {
+            "required": [
+              "doc",
+              "doctyp",
+              "items"
+            ]
+          }
+        ],
+        "properties": {
+          "chksum": {
+            "$ref": "#/definitions/chksum",
+            "description": "CheckSum"
+          },
+          "doc": {
+            "additionalProperties": false,
+            "properties": {
+              "dt": {
+                "$ref": "#/definitions/date",
+                "description": "Document date",
+                "type": "string"
+              },
+              "num": {
+                "$ref": "#/definitions/num",
+                "description": "Document number"
+              },
+              "val": {
+                "$ref": "#/definitions/amt",
+                "description": "Document value"
+              }
+            },
+            "required": [
+              "dt",
+              "num",
+              "val"
+            ],
+            "type": "object"
+          },
+          "doctyp": {
+            "$ref": "#/definitions/doctyp",
+            "description": "type of document"
+          },
+          "flag": {
+            "description": "Upload action",
+            "enum": [
+              "D"
+            ],
+            "type": "string"
+          },
+          "items": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "hsn": {
+                  "$ref": "#/definitions/hsn",
+                  "description": "HSN code"
+                },
+                "rate": {
+                  "$ref": "#/definitions/rate",
+                  "description": "Rate (%)"
+                },
+                "txval": {
+                  "$ref": "#/definitions/txval",
+                  "description": "Taxable Value (₹)"
+                }
+              },
+              "required": [
+                "hsn",
+                "rate",
+                "txval"
+              ],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "action": {
+            "description": "Action",
+            "$ref": "#/definitions/action"
+          },
+          "uplddt": {
+            "description": "Upload date",
+            "$ref": "#/definitions/date"
+          },
+          "errorDetails": {
+            "additionalProperties": true,
+            "required": [
+              "errMsg",
+              "errCd"
+            ],
+            "properties": {
+              "errMsg": {
+                "$ref": "#/definitions/errMsg",
+                "description": "Error Message"
+              },
+              "errCd": {
+                "$ref": "#/definitions/errCd",
+                "description": "Error Code"
+              }
+            },
+            "type": "object"
+          },
+          "rfndelg": {
+            "$ref": "#/definitions/boolean",
+            "description": "Refund eligibility"
+          },
+          "sb": {
+            "additionalProperties": false,
+            "properties": {
+              "dt": {
+                "$ref": "#/definitions/date",
+                "description": "Shipping bill date"
+              },
+              "num": {
+                "$ref": "#/definitions/num",
+                "description": "Shipping bill number"
+              },
+              "pcode": {
+                "$ref": "#/definitions/pcode",
+                "description": "port code"
+              }
+            },
+            "required": [
+              "dt",
+              "num",
+              "pcode"
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "expwp": {
+      "items": {
+        "additionalProperties": false,
+        "anyOf": [
+          {
+            "required": [
+              "doc",
+              "doctyp",
+              "flag"
+            ]
+          },
+          {
+            "required": [
+              "doc",
+              "doctyp",
+              "items"
+            ]
+          }
+        ],
+        "properties": {
+          "chksum": {
+            "$ref": "#/definitions/chksum",
+            "description": "CheckSum"
+          },
+          "doc": {
+            "additionalProperties": false,
+            "properties": {
+              "dt": {
+                "$ref": "#/definitions/date",
+                "description": "Document date"
+              },
+              "num": {
+                "$ref": "#/definitions/num",
+                "description": "Document number"
+              },
+              "val": {
+                "$ref": "#/definitions/amt",
+                "description": "Document value"
+              }
+            },
+            "required": [
+              "dt",
+              "num",
+              "val"
+            ],
+            "type": "object"
+          },
+          "doctyp": {
+            "$ref": "#/definitions/doctyp",
+            "description": "type of document"
+          },
+          "flag": {
+            "description": "Upload action",
+            "enum": [
+              "D"
+            ],
+            "type": "string"
+          },
+          "items": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "cess": {
+                  "$ref": "#/definitions/cess",
+                  "description": "Cess (₹)"
+                },
+                "hsn": {
+                  "$ref": "#/definitions/hsn",
+                  "description": "HSN code"
+                },
+                "igst": {
+                  "$ref": "#/definitions/igst",
+                  "description": "Integrated Tax (₹)"
+                },
+                "rate": {
+                  "$ref": "#/definitions/rate",
+                  "description": "Rate (%)"
+                },
+                "txval": {
+                  "$ref": "#/definitions/txval",
+                  "description": "Taxable Value (₹)"
+                }
+              },
+              "required": [
+                "hsn",
+                "igst",
+                "rate",
+                "txval"
+              ],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "rfndelg": {
+            "$ref": "#/definitions/boolean",
+            "description": "Refund eligibility"
+          },
+          "sb": {
+            "additionalProperties": false,
+            "properties": {
+              "dt": {
+                "$ref": "#/definitions/date",
+                "description": "Shipping bill date"
+              },
+              "num": {
+                "$ref": "#/definitions/num",
+                "description": "Shipping bill number"
+              },
+              "pcode": {
+                "$ref": "#/definitions/pcode",
+                "description": "port code"
+              }
+            },
+            "required": [
+              "dt",
+              "num",
+              "pcode"
+            ],
+            "type": "object"
+          },
+          "action": {
+            "description": "Action",
+            "$ref": "#/definitions/action"
+          },
+          "uplddt": {
+            "description": "Upload date",
+            "$ref": "#/definitions/date"
+          },
+          "errorDetails": {
+            "additionalProperties": true,
+            "required": [
+              "errMsg",
+              "errCd"
+            ],
+            "properties": {
+              "errMsg": {
+                "$ref": "#/definitions/errMsg",
+                "description": "Error Message"
+              },
+              "errCd": {
+                "$ref": "#/definitions/errCd",
+                "description": "Error Code"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "gstin": {
+      "$ref": "#/definitions/gstin",
+      "description": "Supplier GSTIN"
+    },
+    "issez": {
+      "description": "Sez Developer",
+      "$ref": "#/definitions/issez"
+    },
+    "frq": {
+      "description": "Filling Frequency",
+      "$ref": "#/definitions/frq"
+    },
+    "profile": {
+      "description": "Profile",
+      "$ref": "#/definitions/profile"
+    },
+    "status": {
+      "description": "Status / Error Json",
+      "$ref": "#/definitions/status"
+    },
+    "chunknum": {
+      "description": "Chunk Number - incase if json file is chunked into small files",
+      "type": "number"
+    },
+    "islastchunk": {
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Is last Chunk",
+      "type": "string"
+    },
+    "action": {
+      "description": "Action",
+      "$ref": "#/definitions/headerAction"
+    },
+    "trdnm": {
+      "$ref": "#/definitions/trdnm",
+      "description": "Trade/Legal Name"
+    },
+    "impg": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "docs": {
+            "items": {
+              "additionalProperties": false,
+              "anyOf": [
+                {
+                  "required": [
+                    "boe",
+                    "doctyp",
+                    "flag"
+                  ]
+                },
+                {
+                  "required": [
+                    "boe",
+                    "doctyp",
+                    "items"
+                  ]
+                }
+              ],
+              "properties": {
+                "rfndelg": {
+                  "$ref": "#/definitions/boolean",
+                  "description": "Refund eligibility"
+                },
+                "chksum": {
+                  "$ref": "#/definitions/chksum",
+                  "description": "CheckSum"
+                },
+                "uplddt": {
+                  "description": "Upload date",
+                  "$ref": "#/definitions/date"
+                },
+                "boe": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "dt": {
+                      "$ref": "#/definitions/date",
+                      "description": "Bill date"
+                    },
+                    "num": {
+                      "$ref": "#/definitions/boenum",
+                      "description": "Bill of entry"
+                    },
+                    "pcode": {
+                      "$ref": "#/definitions/pcode",
+                      "description": "port code"
+                    },
+                    "val": {
+                      "$ref": "#/definitions/amt",
+                      "description": "Bill value"
+                    }
+                  },
+                  "required": [
+                    "dt",
+                    "num",
+                    "pcode",
+                    "val"
+                  ],
+                  "type": "object"
+                },
+                "doctyp": {
+                  "$ref": "#/definitions/impgdoctyp",
+                  "description": "type of document"
+                },
+                "flag": {
+                  "description": "Upload action",
+                  "enum": [
+                    "D"
+                  ],
+                  "type": "string"
+                },
+                "items": {
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "cess": {
+                        "$ref": "#/definitions/cess",
+                        "description": "Cess (₹)"
+                      },
+                      "hsn": {
+                        "$ref": "#/definitions/hsn",
+                        "description": "HSN code"
+                      },
+                      "igst": {
+                        "$ref": "#/definitions/igst",
+                        "description": "Integrated Tax (₹)"
+                      },
+                      "rate": {
+                        "$ref": "#/definitions/rate",
+                        "description": "Rate (%)"
+                      },
+                      "txval": {
+                        "$ref": "#/definitions/postxval",
+                        "description": "Taxable Value (₹)"
+                      }
+                    },
+                    "required": [
+                      "hsn",
+                      "igst",
+                      "rate",
+                      "txval"
+                    ],
+                    "type": "object"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "action": {
+                  "description": "Action",
+                  "$ref": "#/definitions/action"
+                },
+                "errorDetails": {
+                  "additionalProperties": true,
+                  "required": [
+                    "errMsg",
+                    "errCd"
+                  ],
+                  "properties": {
+                    "errMsg": {
+                      "$ref": "#/definitions/errMsg",
+                      "description": "Error Message"
+                    },
+                    "errCd": {
+                      "$ref": "#/definitions/errCd",
+                      "description": "Error Code"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "pos": {
+            "$ref": "#/definitions/pos",
+            "description": "Place of Supply(Name of State/UT)"
+          }
+        },
+        "required": [
+          "docs",
+          "pos"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "impgsez": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "ctin": {
+            "$ref": "#/definitions/ctin",
+            "description": "Counterparty GSTIN"
+          },
+          "trdnm": {
+            "$ref": "#/definitions/trdnm",
+            "description": "Trade/Legal Name"
+          },
+          "docs": {
+            "items": {
+              "additionalProperties": false,
+              "anyOf": [
+                {
+                  "required": [
+                    "boe",
+                    "doctyp",
+                    "flag"
+                  ]
+                },
+                {
+                  "required": [
+                    "boe",
+                    "doctyp",
+                    "items",
+                    "pos"
+                  ]
+                }
+              ],
+              "properties": {
+                "chksum": {
+                  "$ref": "#/definitions/chksum",
+                  "description": "CheckSum"
+                },
+                "recipientType": {
+                  "type": "string",
+                  "description": "Recipient Type"
+                },
+                "boe": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "dt": {
+                      "$ref": "#/definitions/date",
+                      "description": "Bill date"
+                    },
+                    "num": {
+                      "$ref": "#/definitions/boenum",
+                      "description": "Bill of entry"
+                    },
+                    "pcode": {
+                      "$ref": "#/definitions/pcode",
+                      "description": "port code"
+                    },
+                    "val": {
+                      "$ref": "#/definitions/amt",
+                      "description": "Bill value"
+                    }
+                  },
+                  "required": [
+                    "dt",
+                    "num",
+                    "pcode",
+                    "val"
+                  ],
+                  "type": "object"
+                },
+                "doctyp": {
+                  "$ref": "#/definitions/impgdoctyp",
+                  "description": "type of document"
+                },
+                "flag": {
+                  "description": "Upload action",
+                  "enum": [
+                    "D"
+                  ],
+                  "type": "string"
+                },
+                "items": {
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "cess": {
+                        "$ref": "#/definitions/cess",
+                        "description": "Cess (₹)"
+                      },
+                      "hsn": {
+                        "$ref": "#/definitions/hsn",
+                        "description": "HSN code"
+                      },
+                      "igst": {
+                        "$ref": "#/definitions/igst",
+                        "description": "Integrated Tax (₹)"
+                      },
+                      "rate": {
+                        "$ref": "#/definitions/rate",
+                        "description": "Rate (%)"
+                      },
+                      "txval": {
+                        "$ref": "#/definitions/postxval",
+                        "description": "Taxable Value (₹)"
+                      }
+                    },
+                    "required": [
+                      "hsn",
+                      "igst",
+                      "rate",
+                      "txval"
+                    ],
+                    "type": "object"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "action": {
+                  "description": "Action",
+                  "$ref": "#/definitions/action"
+                },
+                "uplddt": {
+                  "description": "Upload date",
+                  "$ref": "#/definitions/date"
+                },
+                "errorDetails": {
+                  "additionalProperties": true,
+                  "required": [
+                    "errMsg",
+                    "errCd"
+                  ],
+                  "properties": {
+                    "errMsg": {
+                      "$ref": "#/definitions/errMsg",
+                      "description": "Error Message"
+                    },
+                    "errCd": {
+                      "$ref": "#/definitions/errCd",
+                      "description": "Error Code"
+                    }
+                  },
+                  "type": "object"
+                },
+                "pos": {
+                  "$ref": "#/definitions/pos",
+                  "description": "Place of Supply(Name of State/UT)"
+                },
+                "rfndelg": {
+                  "$ref": "#/definitions/boolean",
+                  "description": "Refund eligibility"
+                }
+              },
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "ctin",
+          "docs"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "imps": {
+      "items": {
+        "additionalProperties": false,
+        "anyOf": [
+          {
+            "required": [
+              "flag",
+              "pos"
+            ]
+          },
+          {
+            "required": [
+              "items",
+              "pos"
+            ]
+          }
+        ],
+        "properties": {
+          "chksum": {
+            "$ref": "#/definitions/chksum",
+            "description": "CheckSum"
+          },
+          "flag": {
+            "description": "Upload action",
+            "enum": [
+              "D"
+            ],
+            "type": "string"
+          },
+          "items": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "cess": {
+                  "$ref": "#/definitions/negcess",
+                  "description": "Cess (₹)"
+                },
+                "hsn": {
+                  "$ref": "#/definitions/impshsn",
+                  "description": "HSN code"
+                },
+                "igst": {
+                  "$ref": "#/definitions/negigst",
+                  "description": "Integrated Tax (₹)"
+                },
+                "rate": {
+                  "$ref": "#/definitions/rate",
+                  "description": "Rate (%)"
+                },
+                "txval": {
+                  "$ref": "#/definitions/negtxval",
+                  "description": "Taxable Value (₹)"
+                }
+              },
+              "required": [
+                "hsn",
+                "igst",
+                "rate",
+                "txval"
+              ],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "action": {
+            "description": "Action",
+            "$ref": "#/definitions/action"
+          },
+          "uplddt": {
+            "description": "Upload date",
+            "$ref": "#/definitions/date"
+          },
+          "errorDetails": {
+            "additionalProperties": true,
+            "required": [
+              "errMsg",
+              "errCd"
+            ],
+            "properties": {
+              "errMsg": {
+                "$ref": "#/definitions/errMsg",
+                "description": "Error Message"
+              },
+              "errCd": {
+                "$ref": "#/definitions/errCd",
+                "description": "Error Code"
+              }
+            },
+            "type": "object"
+          },
+          "pos": {
+            "$ref": "#/definitions/pos",
+            "description": "Place of Supply(Name of State/UT)"
+          },
+          "rfndelg": {
+            "$ref": "#/definitions/boolean",
+            "description": "Refund eligibility"
+          }
+        },
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "mis": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "ctin": {
+            "$ref": "#/definitions/ctin",
+            "description": "Counterparty GSTIN"
+          },
+          "trdnm": {
+            "$ref": "#/definitions/trdnm",
+            "description": "Trade/Legal Name"
+          },
+          "docs": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "chksum": {
+                  "$ref": "#/definitions/chksum",
+                  "description": "CheckSum"
+                },
+                "clmrfnd": {
+                  "$ref": "#/definitions/boolean",
+                  "description": "Claim Refund"
+                },
+                "diffprcnt": {
+                  "$ref": "#/definitions/diffprcnt",
+                  "description": "differential percentage"
+                },
+                "pos": {
+                  "$ref": "#/definitions/pos",
+                  "description": "Place of Supply(Name of State/UT)"
+                },
+                "sec7act": {
+                  "$ref": "#/definitions/boolean",
+                  "description": "Supply Covered Under Sec 7 of IGST Act"
+                },
+                "doc": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "dt": {
+                      "$ref": "#/definitions/date",
+                      "description": "Document date"
+                    },
+                    "num": {
+                      "$ref": "#/definitions/num",
+                      "description": "Document number"
+                    },
+                    "val": {
+                      "$ref": "#/definitions/amt",
+                      "description": "Document value"
+                    }
+                  },
+                  "required": [
+                    "dt",
+                    "num",
+                    "val"
+                  ],
+                  "type": "object"
+                },
+                "doctyp": {
+                  "$ref": "#/definitions/doctyp",
+                  "description": "type of document"
+                },
+                "flag": {
+                  "description": "Upload action",
+                  "enum": [
+                    "D"
+                  ],
+                  "type": "string"
+                },
+                "items": {
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "hsn": {
+                        "$ref": "#/definitions/hsn",
+                        "description": "HSN code"
+                      },
+                      "txval": {
+                        "$ref": "#/definitions/txval",
+                        "description": "Taxable Value (₹)"
+                      },
+                      "rate": {
+                        "$ref": "#/definitions/rate",
+                        "description": "Rate (%)"
+                      },
+                      "igst": {
+                        "$ref": "#/definitions/igst",
+                        "description": "Integrated Tax (₹)"
+                      },
+                      "cgst": {
+                        "$ref": "#/definitions/cgst",
+                        "description": "Central Tax (₹)"
+                      },
+                      "sgst": {
+                        "$ref": "#/definitions/sgst",
+                        "description": "State/UT Tax (₹)"
+                      },
+                      "cess": {
+                        "$ref": "#/definitions/cess",
+                        "description": "Cess (₹)"
+                      }
+                    },
+                    "required": [
+                      "txval",
+                      "rate"
+                    ],
+                    "type": "object"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "action": {
+                  "description": "Action",
+                  "$ref": "#/definitions/action"
+                },
+                "uplddt": {
+                  "description": "Upload date",
+                  "$ref": "#/definitions/date"
+                },
+                "errorDetails": {
+                  "additionalProperties": true,
+                  "required": [
+                    "errMsg",
+                    "errCd"
+                  ],
+                  "properties": {
+                    "errMsg": {
+                      "$ref": "#/definitions/errMsg",
+                      "description": "Error Message"
+                    },
+                    "errCd": {
+                      "$ref": "#/definitions/errCd",
+                      "description": "Error Code"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "required": [
+                "doctyp",
+                "pos",
+                "doc",
+                "items"
+              ],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "tblref": {
+            "description": "Table reference",
+            "$ref": "#/definitions/tblref",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ctin",
+          "docs",
+          "tblref"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "rev": {
+      "items": {
+        "additionalProperties": false,
+        "anyOf": [
+          {
+            "properties": {
+              "ctin": {
+                "$ref": "#/definitions/ctin",
+                "description": "Counterparty GSTIN"
+              },
+              "trdnm": {
+                "$ref": "#/definitions/trdnm",
+                "description": "Trade/Legal Name"
+              },
+              "docs": {
+                "items": {
+                  "not": {
+                    "required": [
+                      "suptyp"
+                    ]
+                  },
+                  "type": "object"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "type": {
+                "$ref": "#/definitions/revctintypeG",
+                "description": "GSTIN type"
+              }
+            }
+          },
+          {
+            "properties": {
+              "ctin": {
+                "$ref": "#/definitions/pan",
+                "description": "CounterParty PAN"
+              },
+              "trdnm": {
+                "$ref": "#/definitions/trdnm",
+                "description": "Trade/Legal Name"
+              },
+              "docs": {
+                "items": {
+                  "required": [
+                    "suptyp"
+                  ],
+                  "type": "object"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "type": {
+                "$ref": "#/definitions/revctintypeP",
+                "description": "PAN type"
+              }
+            }
+          }
+        ],
+        "properties": {
+          "ctin": {
+            "description": "Counterparty GSTIN",
+            "type": "string"
+          },
+          "trdnm": {
+            "$ref": "#/definitions/trdnm",
+            "description": "Trade/Legal Name"
+          },
+          "docs": {
+            "items": {
+              "additionalProperties": false,
+              "anyOf": [
+                {
+                  "required": [
+                    "flag",
+                    "pos"
+                  ]
+                },
+                {
+                  "required": [
+                    "items",
+                    "pos"
+                  ]
+                }
+              ],
+              "properties": {
+                "chksum": {
+                  "$ref": "#/definitions/chksum",
+                  "description": "CheckSum"
+                },
+                "recipientType": {
+                  "type": "string",
+                  "description": "Recipient Type"
+                },
+                "diffprcnt": {
+                  "$ref": "#/definitions/diffprcnt",
+                  "description": "differential percentage"
+                },
+                "flag": {
+                  "description": "Upload action",
+                  "enum": [
+                    "D"
+                  ],
+                  "type": "string"
+                },
+                "items": {
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "cess": {
+                        "$ref": "#/definitions/negcess",
+                        "description": "Cess (₹)"
+                      },
+                      "cgst": {
+                        "$ref": "#/definitions/negcgst",
+                        "description": "Central Tax (₹)"
+                      },
+                      "hsn": {
+                        "$ref": "#/definitions/hsn",
+                        "description": "HSN code"
+                      },
+                      "igst": {
+                        "$ref": "#/definitions/negigst",
+                        "description": "Integrated Tax (₹)"
+                      },
+                      "rate": {
+                        "$ref": "#/definitions/rate",
+                        "description": "Rate (%)"
+                      },
+                      "sgst": {
+                        "$ref": "#/definitions/negsgst",
+                        "description": "State/UT Tax (₹)"
+                      },
+                      "txval": {
+                        "$ref": "#/definitions/negtxval",
+                        "description": "Taxable Value (₹)"
+                      }
+                    },
+                    "required": [
+                      "rate",
+                      "txval"
+                    ],
+                    "type": "object"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "action": {
+                  "description": "Action",
+                  "$ref": "#/definitions/action"
+                },
+                "uplddt": {
+                  "description": "Upload date",
+                  "$ref": "#/definitions/date"
+                },
+                "errorDetails": {
+                  "additionalProperties": true,
+                  "required": [
+                    "errMsg",
+                    "errCd"
+                  ],
+                  "properties": {
+                    "errMsg": {
+                      "$ref": "#/definitions/errMsg",
+                      "description": "Error Message"
+                    },
+                    "errCd": {
+                      "$ref": "#/definitions/errCd",
+                      "description": "Error Code"
+                    }
+                  },
+                  "type": "object"
+                },
+                "pos": {
+                  "$ref": "#/definitions/pos",
+                  "description": "Place of Supply(Name of State/UT)"
+                },
+                "rfndelg": {
+                  "$ref": "#/definitions/boolean",
+                  "description": "Refund eligibility"
+                },
+                "sec7act": {
+                  "$ref": "#/definitions/boolean",
+                  "description": "Supply Covered Under Sec 7 of IGST Act"
+                },
+                "suptyp": {
+                  "$ref": "#/definitions/revsupplytyp",
+                  "description": "Supply Type in case of PAN(type = P)"
+                }
+              },
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "type": {
+            "description": "GSTIN or PAN type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ctin",
+          "docs",
+          "type"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "rtnprd": {
+      "$ref": "#/definitions/rtnprd",
+      "description": "Tax period"
+    },
+    "sezwop": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "ctin": {
+            "$ref": "#/definitions/ctin",
+            "description": "Counterparty GSTIN"
+          },
+          "trdnm": {
+            "$ref": "#/definitions/trdnm",
+            "description": "Trade/Legal Name"
+          },
+          "docs": {
+            "items": {
+              "additionalProperties": false,
+              "anyOf": [
+                {
+                  "required": [
+                    "doc",
+                    "doctyp",
+                    "flag"
+                  ]
+                },
+                {
+                  "required": [
+                    "doc",
+                    "doctyp",
+                    "items",
+                    "pos"
+                  ]
+                }
+              ],
+              "properties": {
+                "chksum": {
+                  "$ref": "#/definitions/chksum",
+                  "description": "CheckSum"
+                },
+                "recipientType": {
+                  "type": "string",
+                  "description": "Recipient Type"
+                },
+                "diffprcnt": {
+                  "$ref": "#/definitions/diffprcnt",
+                  "description": "differential percentage"
+                },
+                "doc": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "dt": {
+                      "$ref": "#/definitions/date",
+                      "description": "Document date"
+                    },
+                    "num": {
+                      "$ref": "#/definitions/num",
+                      "description": "Document number"
+                    },
+                    "val": {
+                      "$ref": "#/definitions/amt",
+                      "description": "Document value"
+                    }
+                  },
+                  "required": [
+                    "dt",
+                    "num",
+                    "val"
+                  ],
+                  "type": "object"
+                },
+                "doctyp": {
+                  "$ref": "#/definitions/doctyp",
+                  "description": "type of document"
+                },
+                "flag": {
+                  "description": "Upload action",
+                  "enum": [
+                    "D"
+                  ],
+                  "type": "string"
+                },
+                "items": {
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "hsn": {
+                        "$ref": "#/definitions/hsn",
+                        "description": "HSN code"
+                      },
+                      "rate": {
+                        "$ref": "#/definitions/rate",
+                        "description": "Rate (%)"
+                      },
+                      "txval": {
+                        "$ref": "#/definitions/txval",
+                        "description": "Taxable Value (₹)"
+                      }
+                    },
+                    "required": [
+                      "hsn",
+                      "rate",
+                      "txval"
+                    ],
+                    "type": "object"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "action": {
+                  "description": "Action",
+                  "$ref": "#/definitions/action"
+                },
+                "uplddt": {
+                  "description": "Upload date",
+                  "$ref": "#/definitions/date"
+                },
+                "errorDetails": {
+                  "additionalProperties": true,
+                  "required": [
+                    "errMsg",
+                    "errCd"
+                  ],
+                  "properties": {
+                    "errMsg": {
+                      "$ref": "#/definitions/errMsg",
+                      "description": "Error Message"
+                    },
+                    "errCd": {
+                      "$ref": "#/definitions/errCd",
+                      "description": "Error Code"
+                    }
+                  },
+                  "type": "object"
+                },
+                "pos": {
+                  "$ref": "#/definitions/pos",
+                  "description": "Place of Supply(Name of State/UT)"
+                },
+                "rfndelg": {
+                  "$ref": "#/definitions/boolean",
+                  "description": "Refund eligibility"
+                }
+              },
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "ctin",
+          "docs"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "sezwp": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "ctin": {
+            "$ref": "#/definitions/ctin",
+            "description": "Counterparty GSTIN"
+          },
+          "trdnm": {
+            "$ref": "#/definitions/trdnm",
+            "description": "Trade/Legal Name"
+          },
+          "docs": {
+            "items": {
+              "additionalProperties": false,
+              "anyOf": [
+                {
+                  "required": [
+                    "clmrfnd",
+                    "doc",
+                    "doctyp",
+                    "items",
+                    "pos"
+                  ]
+                },
+                {
+                  "required": [
+                    "doc",
+                    "doctyp",
+                    "flag"
+                  ]
+                }
+              ],
+              "properties": {
+                "chksum": {
+                  "$ref": "#/definitions/chksum",
+                  "description": "CheckSum"
+                },
+                "recipientType": {
+                  "type": "string",
+                  "description": "Recipient Type"
+                },
+                "clmrfnd": {
+                  "$ref": "#/definitions/boolean",
+                  "description": "Claim Refund"
+                },
+                "diffprcnt": {
+                  "$ref": "#/definitions/diffprcnt",
+                  "description": "differential percentage"
+                },
+                "doc": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "dt": {
+                      "$ref": "#/definitions/date",
+                      "description": "Document date"
+                    },
+                    "num": {
+                      "$ref": "#/definitions/num",
+                      "description": "Document number"
+                    },
+                    "val": {
+                      "$ref": "#/definitions/amt",
+                      "description": "Document value"
+                    }
+                  },
+                  "required": [
+                    "dt",
+                    "num",
+                    "val"
+                  ],
+                  "type": "object"
+                },
+                "doctyp": {
+                  "$ref": "#/definitions/doctyp",
+                  "description": "type of document"
+                },
+                "flag": {
+                  "description": "Upload action",
+                  "enum": [
+                    "D"
+                  ],
+                  "type": "string"
+                },
+                "items": {
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "cess": {
+                        "$ref": "#/definitions/cess",
+                        "description": "Cess (₹)"
+                      },
+                      "hsn": {
+                        "$ref": "#/definitions/hsn",
+                        "description": "HSN code"
+                      },
+                      "igst": {
+                        "$ref": "#/definitions/igst",
+                        "description": "Integrated Tax (₹)"
+                      },
+                      "rate": {
+                        "$ref": "#/definitions/rate",
+                        "description": "Rate (%)"
+                      },
+                      "txval": {
+                        "$ref": "#/definitions/txval",
+                        "description": "Taxable Value (₹)"
+                      }
+                    },
+                    "required": [
+                      "hsn",
+                      "igst",
+                      "rate",
+                      "txval"
+                    ],
+                    "type": "object"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "action": {
+                  "description": "Action",
+                  "$ref": "#/definitions/action"
+                },
+                "uplddt": {
+                  "description": "Upload date",
+                  "$ref": "#/definitions/date"
+                },
+                "errorDetails": {
+                  "additionalProperties": true,
+                  "required": [
+                    "errMsg",
+                    "errCd"
+                  ],
+                  "properties": {
+                    "errMsg": {
+                      "$ref": "#/definitions/errMsg",
+                      "description": "Error Message"
+                    },
+                    "errCd": {
+                      "$ref": "#/definitions/errCd",
+                      "description": "Error Code"
+                    }
+                  },
+                  "type": "object"
+                },
+                "pos": {
+                  "$ref": "#/definitions/pos",
+                  "description": "Place of Supply(Name of State/UT)"
+                },
+                "rfndelg": {
+                  "$ref": "#/definitions/boolean",
+                  "description": "Refund eligibility"
+                }
+              },
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "ctin",
+          "docs"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "b2ba": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "typ": {
+            "description": "Type of Amendment in B2B",
+            "enum": [
+              "O"
+            ],
+            "type": "string"
+          },
+          "ctin": {
+            "description": "Counter Party GST",
+            "$ref": "#/definitions/ctin"
+          },
+          "octin": {
+            "description": "Original Counter Party GST",
+            "$ref": "#/definitions/b2bctin"
+          },
+          "trdnm": {
+            "$ref": "#/definitions/trdnm",
+            "description": "Trade/Legal Name"
+          },
+          "otrdnm": {
+            "$ref": "#/definitions/trdnm",
+            "description": "Trade/Legal Name"
+          },
+          "doctyp": {
+            "description": "Document Type",
+            "$ref": "#/definitions/doctyp"
+          },
+          "odoctyp": {
+            "description": "Original Document Type",
+            "$ref": "#/definitions/doctyp"
+          },
+          "invalid": {
+            "description": "Is document invalid",
+            "$ref": "#/definitions/boolean"
+          },
+          "doc_status": {
+            "description": "Mark as invalid Status",
+            "$ref": "#/definitions/doc_status"
+          },
+          "diffprcnt": {
+            "description": "Differential Percentage",
+            "$ref": "#/definitions/diffprcnt"
+          },
+          "sec7act": {
+            "description": "Flag for Supply covered under sec 7 of IGST Act ",
+            "$ref": "#/definitions/boolean"
+          },
+          "rfndelg": {
+            "description": "Flag indicating whether document to be auto-populated to refunds",
+            "$ref": "#/definitions/boolean"
+          },
+          "pos": {
+            "description": "Place of Supply(Name of State/UT)",
+            "$ref": "#/definitions/pos"
+          },
+          "action": {
+            "description": "Action by receiver",
+            "$ref": "#/definitions/action"
+          },
+          "chksum": {
+            "description": "Checksum",
+            "$ref": "#/definitions/chksum"
+          },
+          "amended": {
+            "description": "amended",
+            "$ref": "#/definitions/amended"
+          },
+          "aprd": {
+            "description": "amendment period",
+            "$ref": "#/definitions/aprd"
+          },
+          "amdtyp": {
+            "description": "amendment type",
+            "$ref": "#/definitions/amdtyp"
+          },
+          "doc": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "num": {
+                "description": "Invoice Number",
+                "$ref": "#/definitions/num"
+              },
+              "dt": {
+                "description": "Date",
+                "$ref": "#/definitions/date"
+              },
+              "val": {
+                "description": "Document Value",
+                "$ref": "#/definitions/amt"
+              }
+            },
+            "required": [
+              "num",
+              "dt",
+              "val"
+            ]
+          },
+          "odoc": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "num": {
+                "description": "Original Invoice Number",
+                "$ref": "#/definitions/num"
+              },
+              "dt": {
+                "description": "Original Date",
+                "$ref": "#/definitions/date"
+              }
+            },
+            "required": [
+              "num",
+              "dt"
+            ]
+          },
+          "uplddt": {
+            "description": "Upload date",
+            "$ref": "#/definitions/date"
+          },
+          "errorDetails": {
+            "additionalProperties": true,
+            "required": [
+              "errMsg",
+              "errCd"
+            ],
+            "properties": {
+              "errMsg": {
+                "$ref": "#/definitions/errMsg",
+                "description": "Error Message"
+              },
+              "errCd": {
+                "$ref": "#/definitions/errCd",
+                "description": "Error Code"
+              }
+            },
+            "type": "object"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "hsn": {
+                  "description": "HSN code",
+                  "$ref": "#/definitions/hsn"
+                },
+                "txval": {
+                  "description": "Taxable Value (₹)",
+                  "$ref": "#/definitions/txval"
+                },
+                "rate": {
+                  "description": "Rate (%)",
+                  "$ref": "#/definitions/rate"
+                },
+                "igst": {
+                  "description": "Integrated Tax (₹)",
+                  "$ref": "#/definitions/igst"
+                },
+                "sgst": {
+                  "description": "State/UT Tax (₹)",
+                  "$ref": "#/definitions/sgst"
+                },
+                "cgst": {
+                  "description": "Central Tax (₹)",
+                  "$ref": "#/definitions/cgst"
+                },
+                "cess": {
+                  "description": "Cess (₹)",
+                  "$ref": "#/definitions/cess"
+                }
+              },
+              "required": [
+                "txval",
+                "rate"
+              ]
+            }
+          }
+        },
+        "required": [
+          "ctin",
+          "octin",
+          "doctyp",
+          "odoctyp",
+          "pos",
+          "doc",
+          "odoc",
+          "items"
+        ]
+      }
+    },
+    "sezwopa": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+          "properties": {
+            "ctin": {
+              "description": "Counterparty GSTIN",
+              "$ref": "#/definitions/ctin"
+            },
+            "trdnm": {
+              "$ref": "#/definitions/trdnm",
+              "description": "Trade/Legal Name"
+            },
+            "otrdnm": {
+              "$ref": "#/definitions/trdnm",
+              "description": "Trade/Legal Name"
+            },
+            "octin": {
+              "description": "Original Counter Party GST",
+              "$ref": "#/definitions/ctin"
+            },
+            "doctyp": {
+              "description": "type of document",
+              "$ref": "#/definitions/doctyp"
+            },
+            "odoctyp": {
+              "description": "Original type of document",
+              "$ref": "#/definitions/doctyp"
+            },
+            "invalid": {
+              "description": "Is document invalid",
+              "$ref": "#/definitions/boolean"
+            },
+          "doc_status": {
+            "description": "Mark as invalid Status",
+            "$ref": "#/definitions/doc_status"
+          },
+            "rfndelg": {
+              "description": "Refund eligibility",
+              "$ref": "#/definitions/boolean"
+            },
+            "pos": {
+              "description": "Place of Supply(Name of State/UT)",
+              "$ref": "#/definitions/pos"
+            },
+            "chksum": {
+              "description": "Place of Supply(Name of State/UT)",
+              "$ref": "#/definitions/chksum"
+            },
+            "action": {
+              "description": "Action by receiver",
+              "$ref": "#/definitions/action"
+            },
+            "amended": {
+              "description": "amended",
+              "$ref": "#/definitions/amended"
+            },
+            "aprd": {
+              "description": "amendment period",
+              "$ref": "#/definitions/aprd"
+            },
+            "amdtyp": {
+              "description": "amendment type",
+              "$ref": "#/definitions/amdtyp"
+            },
+            "doc": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "num": {
+                  "description": "Document number",
+                  "$ref": "#/definitions/num"
+                },
+                "dt": {
+                  "description": "Document date",
+                  "$ref": "#/definitions/date"
+                },
+                "val": {
+                  "description": "Document value",
+                  "$ref": "#/definitions/amt"
+                }
+              },
+              "required": [
+                "num",
+                "dt",
+                "val"
+              ]
+            },
+            "odoc": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "num": {
+                  "description": "Original Document number",
+                  "$ref": "#/definitions/num"
+                },
+                "dt": {
+                  "description": "Original Document date",
+                  "$ref": "#/definitions/date"
+                }
+              },
+              "required": [
+                "num",
+                "dt"
+              ]
+            },
+            "uplddt": {
+              "description": "Upload date",
+              "$ref": "#/definitions/date"
+            },
+            "errorDetails": {
+              "additionalProperties": true,
+              "required": [
+                "errMsg",
+                "errCd"
+              ],
+              "properties": {
+                "errMsg": {
+                  "$ref": "#/definitions/errMsg",
+                  "description": "Error Message"
+                },
+                "errCd": {
+                  "$ref": "#/definitions/errCd",
+                  "description": "Error Code"
+                }
+              },
+              "type": "object"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "hsn": {
+                    "description": "HSN code",
+                    "$ref": "#/definitions/hsn"
+                  },
+                  "txval": {
+                    "description": "Taxable Value (₹)",
+                    "$ref": "#/definitions/txval"
+                  },
+                  "rate": {
+                    "description": "Rate (%)",
+                    "$ref": "#/definitions/rate"
+                  }
+                },
+                "required": [
+                  "hsn",
+                  "txval",
+                  "rate"
+                ]
+              }
+            }
+          },
+          "required": [
+            "ctin",
+            "octin",
+            "doctyp",
+            "odoctyp",
+            "pos",
+            "chksum",
+            "doc",
+            "odoc",
+            "items"
+          ]
+       }
+  },
+    "sezwpa": {
+      "type": "array",
+      "items": {
+        "type": "object",
+          "properties": {
+                "ctin": {
+                  "description": "Counterparty GSTIN",
+                  "$ref": "#/definitions/ctin"
+                },
+                "trdnm": {
+                  "$ref": "#/definitions/trdnm",
+                  "description": "Trade/Legal Name"
+                },
+                "otrdnm": {
+                  "$ref": "#/definitions/trdnm",
+                  "description": "Trade/Legal Name"
+                },
+                "octin": {
+                  "description": "Original Counter Party GST",
+                  "$ref": "#/definitions/ctin"
+                },
+                "doctyp": {
+                  "description": "type of document",
+                  "$ref": "#/definitions/doctyp"
+                },
+                "odoctyp": {
+                  "description": "Original type of document",
+                  "$ref": "#/definitions/doctyp"
+                },
+                "invalid": {
+                  "description": "Is document invalid",
+                  "$ref": "#/definitions/boolean"
+                },
+          "doc_status": {
+            "description": "Mark as invalid Status",
+            "$ref": "#/definitions/doc_status"
+          },
+                "rfndelg": {
+                  "description": "Refund eligibility",
+                  "$ref": "#/definitions/boolean"
+                },
+                "clmrfnd": {
+                  "$ref": "#/definitions/boolean",
+                  "description": "Claim Refund"
+                },
+                "diffprcnt": {
+                  "description": "differential percentage",
+                  "$ref": "#/definitions/diffprcnt"
+                },
+                "pos": {
+                  "description": "Place of Supply(Name of State/UT)",
+                  "$ref": "#/definitions/pos"
+                },
+                "chksum": {
+                  "description": "Place of Supply(Name of State/UT)",
+                  "$ref": "#/definitions/chksum"
+                },
+                "action": {
+                  "description": "Action by receiver",
+                  "$ref": "#/definitions/action"
+                },
+                "amended": {
+                  "description": "amended",
+                  "$ref": "#/definitions/amended"
+                },
+                "aprd": {
+                  "description": "amendment period",
+                  "$ref": "#/definitions/aprd"
+                },
+                "amdtyp": {
+                  "description": "amendment type",
+                  "$ref": "#/definitions/amdtyp"
+                },
+                "doc": {
+                  "type": "object",
+                  "properties": {
+                    "num": {
+                      "description": "Document number",
+                      "$ref": "#/definitions/num"
+                    },
+                    "dt": {
+                      "description": "Document date",
+                      "$ref": "#/definitions/date"
+                    },
+                    "val": {
+                      "description": "Document value",
+                      "$ref": "#/definitions/amt"
+                    }
+                  },
+                  "required": [
+                    "num",
+                    "dt",
+                    "val"
+                  ]
+                },
+                "odoc": {
+                  "type": "object",
+                  "properties": {
+                    "num": {
+                      "description": "Original Document number",
+                      "$ref": "#/definitions/num"
+                    },
+                    "dt": {
+                      "description": "Original Document date",
+                      "$ref": "#/definitions/date"
+                    }
+                  },
+                  "required": [
+                    "num",
+                    "dt"
+                  ]
+                },
+                "uplddt": {
+                  "description": "Upload date",
+                  "$ref": "#/definitions/date"
+                },
+                "errorDetails": {
+                  "additionalProperties": true,
+                  "required": [
+                    "errMsg",
+                    "errCd"
+                  ],
+                  "properties": {
+                    "errMsg": {
+                      "$ref": "#/definitions/errMsg",
+                      "description": "Error Message"
+                    },
+                    "errCd": {
+                      "$ref": "#/definitions/errCd",
+                      "description": "Error Code"
+                    }
+                  },
+                  "type": "object"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "hsn": {
+                        "description": "HSN code",
+                        "$ref": "#/definitions/hsn"
+                      },
+                      "txval": {
+                        "description": "Taxable Value (₹)",
+                        "$ref": "#/definitions/txval"
+                      },
+                      "rate": {
+                        "description": "Rate (%)",
+                        "$ref": "#/definitions/rate"
+                      },
+                      "igst": {
+                        "description": "Integrated Tax (₹)",
+                        "$ref": "#/definitions/igst"
+                      },
+                      "cess": {
+                        "description": "Cess (₹)",
+                        "$ref": "#/definitions/cess"
+                      }
+                    },
+                    "required": [
+                      "hsn",
+                      "txval",
+                      "rate",
+                      "igst",
+                      "cess"
+                    ]
+                  }
+                }
+          },
+          "required": [
+            "ctin",
+            "octin",
+            "doctyp",
+            "odoctyp",
+            "pos",
+            "clmrfnd",
+             "doc",
+            "odoc",
+            "items"
+          ]
+        }
+    },
+	"dea": {
+      "type": "array",
+      "items": {
+        "type": "object",
+		"additionalProperties": false,
+          "properties": {
+                "ctin": {
+                  "description": "Counterparty GSTIN",
+                  "$ref": "#/definitions/ctin"
+                },
+                "trdnm": {
+                  "$ref": "#/definitions/trdnm",
+                  "description": "Trade/Legal Name"
+                },
+				"sec7act": {
+				  "description": "Flag for Supply covered under sec 7 of IGST Act ",
+				  "$ref": "#/definitions/boolean"
+				},
+                "otrdnm": {
+                  "$ref": "#/definitions/trdnm",
+                  "description": "Trade/Legal Name"
+                },
+                "octin": {
+                  "description": "Original Counter Party GST",
+                  "$ref": "#/definitions/ctin"
+                },
+                "doctyp": {
+                  "description": "type of document",
+                  "$ref": "#/definitions/doctyp"
+                },
+                "odoctyp": {
+                  "description": "Original type of document",
+                  "$ref": "#/definitions/doctyp"
+                },
+                "invalid": {
+                  "description": "Is document invalid",
+                  "$ref": "#/definitions/boolean"
+                },
+          "doc_status": {
+            "description": "Mark as invalid Status",
+            "$ref": "#/definitions/doc_status"
+          },
+                "rfndelg": {
+                  "description": "Refund eligibility",
+                  "$ref": "#/definitions/boolean"
+                },
+                "clmrfnd": {
+                  "$ref": "#/definitions/boolean",
+                  "description": "Claim Refund"
+                },
+                "diffprcnt": {
+                  "description": "differential percentage",
+                  "$ref": "#/definitions/diffprcnt"
+                },
+                "pos": {
+                  "description": "Place of Supply(Name of State/UT)",
+                  "$ref": "#/definitions/pos"
+                },
+                "chksum": {
+                  "description": "Place of Supply(Name of State/UT)",
+                  "$ref": "#/definitions/chksum"
+                },
+                "action": {
+                  "description": "Action by receiver",
+                  "$ref": "#/definitions/action"
+                },
+                "amended": {
+                  "description": "amended",
+                  "$ref": "#/definitions/amended"
+                },
+                "aprd": {
+                  "description": "amendment period",
+                  "$ref": "#/definitions/aprd"
+                },
+                "amdtyp": {
+                  "description": "amendment type",
+                  "$ref": "#/definitions/amdtyp"
+                },
+                "doc": {
+                  "type": "object",
+                  "properties": {
+                    "num": {
+                      "description": "Document number",
+                      "$ref": "#/definitions/num"
+                    },
+                    "dt": {
+                      "description": "Document date",
+                      "$ref": "#/definitions/date"
+                    },
+                    "val": {
+                      "description": "Document value",
+                      "$ref": "#/definitions/amt"
+                    }
+                  },
+                  "required": [
+                    "num",
+                    "dt",
+                    "val"
+                  ]
+                },
+                "odoc": {
+                  "type": "object",
+                  "properties": {
+                    "num": {
+                      "description": "Original Document number",
+                      "$ref": "#/definitions/num"
+                    },
+                    "dt": {
+                      "description": "Original Document date",
+                      "$ref": "#/definitions/date"
+                    }
+                  },
+                  "required": [
+                    "num",
+                    "dt"
+                  ]
+                },
+                "uplddt": {
+                  "description": "Upload date",
+                  "$ref": "#/definitions/date"
+                },
+                "errorDetails": {
+                  "additionalProperties": true,
+                  "required": [
+                    "errMsg",
+                    "errCd"
+                  ],
+                  "properties": {
+                    "errMsg": {
+                      "$ref": "#/definitions/errMsg",
+                      "description": "Error Message"
+                    },
+                    "errCd": {
+                      "$ref": "#/definitions/errCd",
+                      "description": "Error Code"
+                    }
+                  },
+                  "type": "object"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "hsn": {
+                        "description": "HSN code",
+                        "$ref": "#/definitions/hsn"
+                      },
+                      "txval": {
+                        "description": "Taxable Value (₹)",
+                        "$ref": "#/definitions/txval"
+                      },
+                      "rate": {
+                        "description": "Rate (%)",
+                        "$ref": "#/definitions/rate"
+                      },
+                      "igst": {
+                        "description": "Integrated Tax (₹)",
+                        "$ref": "#/definitions/igst"
+                      },
+					  "sgst": {
+						"description": "State/UT Tax (₹)",
+						"$ref": "#/definitions/sgst"
+					  },
+					  "cgst": {
+						"description": "Central Tax (₹)",
+						"$ref": "#/definitions/cgst"
+					  },
+                      "cess": {
+                        "description": "Cess (₹)",
+                        "$ref": "#/definitions/cess"
+                      }
+                    },
+                    "required": [
+                      "hsn",
+                      "txval",
+                      "rate"
+                    ]
+                  }
+                }
+          },
+          "required": [
+            "ctin",
+            "octin",
+            "doctyp",
+            "odoctyp",
+            "pos",
+            "doc",
+            "odoc",
+            "items"
+          ]
+        }
+    }
+   },
+  "required": [
+    "gstin",
+    "rtnprd",
+    "issez",
+    "frq",
+    "profile"
+  ],
+  "title": "ANX1 Schema",
+  "type": "object"
+}

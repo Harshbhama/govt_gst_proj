@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Jagadeesh Rajendran">
+    <title>Startup Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript">
+        let latestVer;
+        let rotationDegree = 0;
+        console.log("jaggu|01|latestVer:", latestVer);
+        function init(){
+            setInterval(function(){
+                    rotationDegree = rotationDegree + 60;                    
+                    document.getElementById("comp2img").style.transform = "rotate(" + rotationDegree + "deg)";
+                },117);
+            document.getElementById("button-dwn").href = props.gst_dwn_url;
+            document.getElementById("comp1").style.visibility = "hidden";
+            document.getElementById("comp2").style.visibility = "visible";
+            getVerInfo();
+            setTimeout(function(){
+                if(!latestVer){
+                    setInterval(loadOfflineTool, 1000);                    
+                }
+            }, 7500);
+        }
+        
+        function loadOldVer(){
+            document.getElementById("comp1").style.visibility = "hidden";
+            document.getElementById("comp2").style.visibility = "visible";
+            setInterval(loadOfflineTool, 1000);
+        }
+
+        function loadOfflineTool(){
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if(this.status == 200 || this.status == 304){
+                        window.location.replace(props.offlinetool_url);
+                    } else {
+                        console.log("jaggu|offlinetool_url:", props.offlinetool_url, "|status:", this.status, "|statusText:", this.statusText);
+                    }
+                }
+            };
+            xhr.open('GET', props.offlinetool_url);
+            xhr.send();
+        } 
+
+        function getVerInfo() {
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if(this.status == 200 || this.status == 304){
+                        latestVer = xhr.responseText;
+                        console.log("jaggu|02|latestVer:", latestVer);
+                        if(latestVer){
+                            latestVer.trim();
+                            if(props.offlinetool_version == latestVer){
+                                setInterval(loadOfflineTool, 1000);
+                            } else{
+                                document.getElementById("comp1").style.visibility = "visible";
+                                document.getElementById("comp2").style.visibility = "hidden";
+                            }
+                        }
+                    } else {
+                        console.log("jaggu|gst_ver_url:", props.gst_ver_url, "|status:", this.status, "|statusText:", this.statusText);
+                    }
+                }                
+            };
+            xhr.open('GET', props.gst_ver_url);
+            xhr.responseType = "text";
+            xhr.timeout = 7000;
+            xhr.send();
+        }
+        
+        window.onload = init;
+    </script>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="Emblem_of_India-white.svg" alt="Emblem image">
+            <p>GST New Return Offline Tool</p>
+        </div>
+    </header>
+    
+    <main>
+        <div class="info" id="comp1">
+            <h2>New Version Info:</h2>
+            <div class="info-txt">
+                <p >A new version of the offline tool is available on GST portal. Please click on <b>"Go to Download Page"</b> button provided below to download and install the same.</p>
+                <p>If you intend to work on the older version, please click on <b>"Continue with Installed Version"</b> button provided below.</p>
+                <br>
+                <p>Note: The JSON created with the older version of offline tool may not be uploaded successfully on Portal.</p>    
+            </div>
+
+            <a href="#" target="_blank" class="button-01" id="button-dwn">
+                <div class="button-01-content">
+                    <p>Go to</p>
+                    <p>Download Page</p>
+                </div>
+            </a>
+
+            <a href="#" class="button-01" onclick="loadOldVer(); return false;">
+                <div class="button-01-content">
+                    <p>Continue with</p>
+                    <p>Installed Version</p>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="spinner" id="comp2">
+            <p>Loading... Please Wait...</p>            
+            <img src="spinner.png" id="comp2img" alt="spinner.png not loaded">                        
+        </div>
+
+    </main>
+        
+    <footer></footer>
+
+</body>
+</html>

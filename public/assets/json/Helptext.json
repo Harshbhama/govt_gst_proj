@@ -1,0 +1,631 @@
+
+{
+    "loginpage":"This is homepage Help Text.This is homepage Help Text.This is homepage Help Text.This is homepage Help Text.This is homepage Help Text.This is homepage Help Text. This is homepage Help Text.This is homepage Help Text.This is homepage Help Text.This is homepage Help Text.This is homepage Help Text.",
+    "dashboards": "This is dashboard Help Text.This is dashboard Help Text.This is dashboard Help Text.This is dashboard Help Text.This is dashboard Help Text.This is dashboard Help Text. This is dashboard Help Text.This is dashboard Help Text.This is dashboard Help Text.This is dashboard Help Text.This is dashboard Help Text.",
+    "prepOffline":"Prepare Annexure help text",
+    "an1summary":"Anx-1 summary help text",
+    "an1b2c":"B2C help text",
+    "an1b2b":"B2B help text",
+    "homepage":{
+        "heading":"",
+        "helptext":["1. You must create/add profile in Offline tool before logging in to offline tool. To create your profile in Offline tool, click on <b>'Manage profile'</b> option available at top right-hand side and click on <b>'Add profile'</b> option to create a new profile. On click of 'Add profile' option, tool navigates to 'Add taxpayer profile' page","2. If you want to view/change the profile which you have already created in Offline tool, then click on <b>Manage profile -> Modify profile.</b>","<b>Steps for logging in to Offline tool:</B>","<ol><li> If you have already created a profile in Offline tool, then enter your GSTIN or Trade/legal name in GSTIN field.</li><li>Trade/Legal name and return type shall be auto filled based on the GSTIN or Trade/legal name entered in 'GSTIN field'.</li><li> Select Financial year and Tax period from the drop down.</li><li> Click on Proceed (Proceed button shall be enabled only after filling up all mandatory fields)</li></ol>"],
+        "showmore": false
+    },
+    "createprofile": {
+        "heading": "",
+        "helptext": [
+         "If you have not created your profile previously in this Offline tool, then create your profile in this ('Add taxpayer profile') page.","You have to fill up the below mentioned fields to create profile: - ","1. <b>GSTIN of taxpayer:-</b> Please enter your GSTIN. Tool validates only structure of GSTIN. This field is mandatory","2. <b>Trade/Legal name: -</b> This field is not mandatory but it's recommended to fill up.","3. <b>SEZ unit/developer: -</b> If you are registered as SEZ unit/developer, then please select 'Yes' from the drop down else select 'No'","4. <b>Filing frequency: -</b> If you wish to file your return monthly, then select 'Monthly filer' else select 'Quarterly filer'.","5. <b>Return type: -</b> Select the relevant return type from the drop down.","6. If you want to add another profile (Different GSTIN), then you can click on 'Plus' symbol to add another profile. Click on <b>'Save'</b> option to save the records and saved records can be viewed/checked in <b>'Modify profile page'</b>","Note: You can change your profile any time by clicking on <b>'Modify profile'</b> option available at log in page and also you can change your profile as many times you want."
+
+        ],
+        "showmore": false
+    },
+    "editprofile": {
+        "heading": "",
+        "helptext": [
+            "In this page, you can view/modify the profile(s) which you have already created in Offline tool.","You can also search specific profile by entering the GSTIN or Trade/legal name in 'Search by GSTIN or trade/legal' name option and on click of search option, profile details shall be displayed.","<b>Follow the below steps to edit/delete the profile:</b>","<ol><li>Click on <b>'Edit'</b> symbol available in Action column. On click of Edit symbol, all fields except GSTIN field shall be changed to editable mode.</li><li>Change the relevant fields wherever applicable. You can modify/change all fields except GSTIN field.</li><li> Click on <b>'Save'</b> symbol to save the changes.</li><li> You can delete the profile by clicking <b>'Delete'</b> symbol in Action column. The action (Delete) once exercised can't be reversed later.</li></ol> "
+
+        ],
+        "showmore": false
+    },
+    "dashboard": {
+        "heading": "",
+        "helptext": [
+            "<b>The following boxes shall be displayed on Offline tool dashboard page.</b><ol><li>Annexure of supplies (ANX-1)</li><li>Annexure of inward supplies (ANX-2)</li><li>Masters</li></ol>",
+            "<b>Annexure of supplies (GST ANX-1): -</b> The following three options shall be displayed on ANX-1 (offline) tile:",
+            "1. <b>Prepare Offline: -</b> To prepare/view ANX-1 through offline tool. You shall click on 'Prepare Offline' button available in Annexure of supplies (ANX-1) tile.",
+            "2. <b>Open downloaded JSON file: -</b> To open ANX-1 JSON file downloaded from GST Portal and saved on local system, taxpayer to click on 'Open Downloaded JSON File'. Upon successful processing of file, the details would be populated to respective tables.",
+            "3. <b>Open error JSON file: -</b> To open ANX-1 error JSON file downloaded from GST portal from the 'Processed with error' link and saved on local system, taxpayer to click on 'Open Error JSON File'. Upon successful processing of file, the error details would be populated in GST portal validation error column.",
+            "<b>Annexure of Inward Supplies (GST ANX-2):-</b> The following three options shall be displayed on ANX-2 (offline) box:",
+            "1. <b>Open downloaded JSON file:-</b> To open GST ANX-2 JSON file downloaded from GST Portal and saved on local system, taxpayer to click on ‘Open Downloaded JSON File’. Upon successful processing of file, the details would be populated to respective tables.",
+            "2. <b>Take action: -</b>Taxpayer to click on ‘Take Action’ button to take action on earlier opened GST ANX-2 file in the offline tool based on the details provided on the login page.",
+            "3. <b>Open error JSON file: -</b> Taxpayer shall click on ‘Open Error JSON File’ to open the GST ANX-2 error JSON file downloaded from portal from the ‘Processed with error’ link and saved on local system in the offline tool. Upon successful processing of file, the details would be populated to respective tables with the error details populated in GST portal validations error column."
+        ],
+        "showmore":true
+    },
+	"importfile":{
+        "helptext": [  
+            "<b>Import your Excel/ CSV file: - </b> Taxpayer can import filled-up Excel or CSV template into the offline tool by using this option (template available in downloaded offline tool zip file). On click of Import excel button, taxpayer can import the filled-up Excel template in the Offline tool. To import filled up CSV template, taxpayer needs to first select the table from the dropdown and click Import CSV button. Upon successful import of excel or CSV file, the details shall be auto populated to respective tables. Taxpayer can also import error Excel file to view/ edit the details auto-populated in respective tables." ,
+
+            "In case of unsuccessful import of filled-up Excel/CSV template, error excel file would be generated. Error excel file would be generated in the below scenarios:",
+            "1. <b>Mandatory fields not entered: -</b> If taxpayer has not entered mandatory details for one or more records in imported Excel/CSV template, tool will generate error Excel file. Taxpayer may download the error Excel file and import the same file, after making necessary corrections.",
+			"2. <b>Unsuccessful processing of Excel/CSV template: - </b> If one or more records in the imported Excel/CSV template is not as per the expected format, it would cause unsuccessful processing of the file. Taxpayer may download the error Excel file and retry to import the file prepared in Excel/CSV template, after making necessary corrections.",
+			"3. <b>Partially Processed: - </b> If one or more records in the imported Excel/CSV template fails data validation, tool will generate error Excel file for such records. Taxpayer may download the error Excel file and import the same file, after making necessary corrections.",
+			"4. <b>All records failing validation: -</b> If all the records in the imported Excel/CSV template fails data validation, tool will generate the error Excel file. Taxpayer may download the error Excel file and import the same file, after making necessary corrections.",
+        
+            "<b>File History: - </b> To check the upload history, taxpayer can click on ’Upload history’ button. On click of it, taxpayer can view the following details:" ,
+
+            "&nbsp; •Upload date and time of Excel/CSV file<br>&nbsp; •File name of the uploaded Excel/CSV file<br>&nbsp; •Type of file (Excel/CSV)<br>&nbsp; •Status (Success/Error/Partially processed)<br>&nbsp; •Error report link, incase there are any errors while uploading the Excel/CSV file"
+        
+        ],
+      
+        "showmore": true
+    },
+    "historyfiles":{
+        "helptext": [  
+            "<b>File History: - </b> To check the upload history, taxpayer can click on ’Upload history’ button. On click of it, taxpayer can view the following details:" ,
+
+            "&nbsp; •Upload date and time of Excel/CSV file<br>&nbsp; •File name of the uploaded Excel/CSV file<br>&nbsp; •Type of file (Excel/CSV)<br>&nbsp; •Status (Success/Error/Partially processed)<br>&nbsp; •Error report link, incase there are any errors while uploading the Excel/CSV file"
+             ]
+      },
+    "aoscommon": {
+        "heading": "",
+        "helptext": [
+        "Select the relevant table from the <b>'Select table to add details'</b> drop down to add/modify/view the documents in ANX-1. Tool navigates to the relevant table based on the selection made from the drop down.","Note: Amendment Tables would be available in drop down only in case the JSON file downloaded from GST Portal has details in these tables. No new details can be added in amendment tables. Only amendment of auto-drafted details would be allowed.","<hr><b>The following five options shall be displayed at the top of this page: - </b>","<b>Import your Excel/ CSV file:</b> - You have an option to fill the ANX-1 document details in an Excel or CSV template (template shall be available in downloaded offline tool zip file). The filled-up template needs to be imported into the offline tool. Taxpayer would be provided with sample excel and csv template which will be available along with the downloaded offline tool. Upon successful import of excel/csv file, the details shall be auto populated to respective tables.","<b>Open downloaded JSON file: -</b> Click on this button to download  ANX-1 JSON file in to the Offline Tool. Upon successful processing of file, the details would be populated to respective Tables.","<b>Remove Data in all tables: -</b> Taxpayer can use this option to remove the records from all tables of the tool which he added in tables or imported data in tool through excel/ csv/JSON file. The action (Remove) once exercised can't be reversed later.","<b>Generate JSON file to upload: -</b> To generate JSON file for upload of ANX-1 details prepared offline on GST portal","<b>Export to Excel: -</b> Taxpayer can use this option to export the details as available in offline as an excel file. On click of this button, offline tool shall generate the details in an Excel format.","<b>View Consolidated Summary: -</b> You can see the consolidated summary of details added in various tables. This table shall be auto updated based on the details added in various tables. Default summary shall be the Net of debit/credit notes.","<b>View draft return: -</b> On click of this button, offline tool navigates to the 'Draft main return'. Offline tool shall auto fill the details in draft main return page based on the details available in various tables. This table is non- editable.","Note: This is only for reference based on the details filled up in Offline tool. Please check the GST RET-1/2/3 in GST portal for correct liability"
+        ],
+        "helptextErrFlow":["1. In this page, you can correct only error records but you can’t add the new records. If you intend to add new documents, please add in ‘Prepare Offline’ flow. After correcting the error records successfully, same shall be available in ‘Main flow’ as well as ‘Error flow’.",
+            "2. You can select the relevant table to edit/correct the errors by selecting the drop down of ‘Select table to edit details’. Consolidated summary shall not be available in error flow. However, table summary shall be available in relevant table.",
+            "3. After you have corrected errors in <b>all tables</b>, click on ‘Generate JSON file to upload’ button to generate the JSON file.",
+            
+            "The following options shall be displayed at the top of this page:",
+            "<b>Remove error data in all table:</b> On click of this button, all records which are not corrected shall be removed from tool and the same can’t be retrieved.<br>To remove corrected records, please navigate to relevant table, then please click on ‘select all’ check box and click on ‘Remove’ button or click on ‘Remove’ button in Action column. Record(s) will be removed from error flow and main flow (Prepare Offline) as well.",
+            
+            "<b>Generate JSON file to upload:</b> Click on this button, to generate the JSON file.",
+            "<b>Export to excel:</b> On click of this button, offline tool shall generate the details in an Excel format. The file may be imported again after correction of errors using ‘Import Excel/CSV’ facility in ‘Prepare Offline’ flow."],
+        "showmore": true
+    },
+    "aoscommon/b2c": {
+        "heading": "",
+        "helptext": [
+            "All supplies made to consumers and un-registered persons (i.e. B2C) shall be reported in this table. Supplies shall be reported tax rate wise and net of debit / credit notes. HSN Code is not required to be reported in this table",          
+            "<hr><b>Follow the below steps to add the details in table no. 3A (Supplies made to consumers and un-registered persons): -</b>","<ol><li>Select the relevant State from the 'Place of Supply (Name of state/UT)' field and click on 'Plus' symbol available in Action column.If outward supply is applicable differential percentage of tax rate (65% of the actual tax rate) then click on 'Differential % of tax rate' check box.If Supply covered under sec 7 of IGST Act then click on 'Supply covered under sec. 7 of IGST Act' check box. On click of this check box, supply type shall be considered as 'Inter-state'. may not be applicable.</li><li>Enter the details by tax rate wise in item details table and click on 'Save document' option to save the record</li><li>Successfully saved record(s)/document(s) shall be available in 'Document added' table</li></ol>",
+            "<hr><b>Edit/delete/remove</b>","<ol><li>You can edit the successfully saved record any time by clicking on edit symbol available in Action column in 'Documents added' table.</li><li>On click of edit symbol, record shall be available for edit in 'Add document' table</li><li>On click of Remove button, record shall be removed from the Offline tool</li><li>On click of delete button, record shall be removed from the online only after successful upload of JSON file but record remain exist in offline until you click on remove</li></ol>","<b>Table Summary: -</b> Table summary shall be updated based on the number of records which you have added in this table."
+          
+        ],
+        "helptextErrFlow":[
+            "1. After successful import of error JSON file, error documents shall be displayed in relevant table. Error message shall be displayed in ‘GST portal validation error’ column.",
+            "2. To correct the records, click on ‘Edit’ symbol in Action column. On click of ‘Edit’ full document details (including Item details) shall be displayed. Click on ‘Save document’ after correcting the relevant error in the document.",
+            "<b>Note:</b> Error message in ‘GST portal validation error’ column shall be removed on click of ‘Save document’ though not corrected and clicked on ‘Save document’.",
+            
+            "The following options shall be displayed at the top of the page:",
+            "<b>Remove error data in selected table:</b> On click of this button, all records which are not corrected, shall be removed from tool and the same can’t be retrieved. <br>To remove corrected records, please navigate to relevant table, then please click on ‘select all’ check box and click on ‘Remove’ button or click on ‘Remove button in Action column. Record(s) will be removed from error flow and main flow (Prepare Offline) as well.",
+            "<b>Generate JSON file to upload: </b>Click on this button, to generate the JSON file.",
+            "<b>Export to excel:</b> On click of this button, offline tool shall generate the details in an Excel format. The file may be imported again after correction of errors using ‘Import Excel/CSV’ facility in ‘Prepare Offline’ flow."],
+           
+            
+        "showmore": true
+    },
+    "aoscommon/rc": {
+        "heading": "",
+        "helptext": [
+            "1. All supplies attracting reverse charge shall be reported by the recipient. Only GSTIN/PAN wise details have to be reported. Invoice wise details are not required to be reported in this table.",
+            "2. The amount of advance paid for such details shall to be declared in the month in which the same was paid. The value of supplies reported shall be net of debit / credit notes and advances on which tax has already been paid at the time of payment of advance, if any.",
+            "<hr><b>Follow the below steps to add the document in this table:</b>",
+            "<ol><li>Please enter the all mandatory fields such as supplier's GSTIN/PAN in 'GSTIN/PAN' field, PoS (Place of Supply) and click on 'Plus' symbol in action column.If supply is applicable at differential percentage of tax rate (65% of the actual tax rate) or covered under sec 7 of IGST act then click on relevant check box.</li><li>Enter the item details either tax rate wise or HSN code wise in item details table and click on save. </li><li> You can check the successfully saved record(s)/document(s) in <b>'Document added'</b> table",
+            "<hr><b>Edit/delete/remove</b></li></ol>",
+           
+          
+            "<ol><li>You can edit the successfully saved record any time by clicking on edit symbol available in Action column in <b>'Documents added'</b> table.</li><li>On click of edit symbol, record shall be available for edit in <b>'Add document'</b> table</li><li> On click of Remove button, record shall be removed from the Offline tool</li><li> On click of delete button, record shall be removed from the online only after successful upload of JSON file but record remain exist in offline until you click on remove</li></ol>",
+           
+            "<b>Table Summary: -</b> Table summary shall be updated based on the number of records which you have added in this table."
+        ],
+        "helptextErrFlow":[
+            "1. After successful import of error JSON file, error documents shall be displayed in relevant table. Error message shall be displayed in ‘GST portal validation error’ column.",
+            "2. To correct the records, click on ‘Edit’ symbol in Action column. On click of ‘Edit’ full document details (including Item details) shall be displayed. Click on ‘Save document’ after correcting the relevant error in the document.",
+            "<b>Note:</b> Error message in ‘GST portal validation error’ column shall be removed on click of ‘Save document’ though not corrected and clicked on ‘Save document’.",
+            
+            "The following options shall be displayed at the top of the page:",
+            "<b>Remove error data in selected table:</b> On click of this button, all records which are not corrected, shall be removed from tool and the same can’t be retrieved. <br>To remove corrected records, please navigate to relevant table, then please click on ‘select all’ check box and click on ‘Remove’ button or click on ‘Remove button in Action column. Record(s) will be removed from error flow and main flow (Prepare Offline) as well.",
+            "<b>Generate JSON file to upload: </b>Click on this button, to generate the JSON file.",
+            "<b>Export to excel:</b> On click of this button, offline tool shall generate the details in an Excel format. The file may be imported again after correction of errors using ‘Import Excel/CSV’ facility in ‘Prepare Offline’ flow."],
+        "showmore": true
+    },
+    "aoscommon/b2b":{
+        "helptext":["1. All supplies (other than those attracting reverse charge) made to registered persons (GSTIN/UIN holders i.e. B2B) shall be reported in this table. Reporting of supplies made to Government department and other entities having TDS registration or to persons having TCS registration, shall also be reported here.","2. Supply of goods by SEZ units / developers to persons located in domestic tariff area (DTA) shall not be reported in this table as the same will be treated as imports and shall be reported by the recipient in table 3K.","3. Supply of services made by SEZ units/developers to persons located in domestic tariff area (DTA) shall be reported by the SEZ unit / developers in this table.","4. Supply of goods or services made to SEZ units / developers shall not be declared in this table but the same  shall be reported in table 3E or 3F, as the case may be.","<b>Follow the below steps to add the document details: -</b>","<ol><li>Fill up all mandatory fields in 'Add document' table and click on '+' symbol available in 'Action' field to add the item details.If outward supply is subjected to differential percentage of tax rate (65% of the actual tax rate) or Supply is covered under sec. 7 of IGST Act then click on relevant check box.</li><li>Depending upon  your aggregate turnover, enter the item details either tax rate wise or HSN code wise in 'Item details' table and click on 'Save document' option to save the record.</li><li>Successfully saved record(s)/document(s) shall be available in 'Document added' table</li></ol>","<b>Edit/delete/remove</b>","<ol><li>You can edit the successfully saved record any time by clicking on edit symbol available in Action column in <b>'Documents added'</b> table.</li><li>On click of edit symbol, record shall be available for edit in <b>'Add document'</b> table</li><li>On click of 'Remove' button, record shall be removed from the Offline tool.</li><li> On click of 'Delete' button, record shall be removed from the portal only after successful upload of JSON file but record will remain in the offline until you click on remove.</li></ol>",
+            "<b>Table Summary: -</b>Table summary shall be updated based on the documents which you have added/imported through JSON/Excel/CSV in this table."],
+            "helptextErrFlow":[
+                "1. After successful import of error JSON file, error documents shall be displayed in relevant table. Error message shall be displayed in ‘GST portal validation error’ column.",
+            "2. To correct the records, click on ‘Edit’ symbol in Action column. On click of ‘Edit’ full document details (including Item details) shall be displayed. Click on ‘Save document’ after correcting the relevant error in the document.",
+            "<b>Note:</b> Error message in ‘GST portal validation error’ column shall be removed on click of ‘Save document’ though not corrected and clicked on ‘Save document’.",
+            
+            "The following options shall be displayed at the top of the page:",
+            "<b>Remove error data in selected table:</b> On click of this button, all records which are not corrected, shall be removed from tool and the same can’t be retrieved. <br>To remove corrected records, please navigate to relevant table, then please click on ‘select all’ check box and click on ‘Remove’ button or click on ‘Remove button in Action column. Record(s) will be removed from error flow and main flow (Prepare Offline) as well.",
+            "<b>Generate JSON file to upload: </b>Click on this button, to generate the JSON file.",
+            "<b>Export to excel:</b> On click of this button, offline tool shall generate the details in an Excel format. The file may be imported again after correction of errors using ‘Import Excel/CSV’ facility in ‘Prepare Offline’ flow."
+            ],
+            "showmore": true
+    },
+    "aoscommon/exp": {
+        "helptext": [
+            "1. Export with payment of tax/without payment of tax shall be reported in this table.",
+            "2. Shipping bill / bill of export number available (till the date of filing of return) may be reported against export invoices. Details of remaining shipping bills can be reported after filing the return. A separate functionality for updation of details of shipping bill / bill of export only is available on the portal.",
+           
+            "<b>Follow the below steps to add the document in this table:</b>",
+            "<ol><li>Fill up all mandatory fields in 'Add document' table and click on '+' symbol available in Action field to add the item details. If export is made with payment of tax, then select 'Export with payment' option from the Export type column else select 'Export without payment' option from the Export type column.</li><li>HSN code wise details are mandatory in Item details table. Enter the item details by HSN code wise and click on 'save document'. </li><li>You can check the successfully saved record(s)/document(s) in 'Document added' table</li></ol>",
+            "<b>Edit/delete/remove</b>",
+            "<ol><li>You can edit the successfully saved record any time by clicking on edit symbol available in Action column in 'Documents added' table.</li><li>On click of edit symbol, record shall be available for edit in 'Add document' table.</li><li>On click of 'Remove' button, record shall be removed from the Offline tool.</li><li>On click of delete button, record shall be removed from the portal  only after successful upload of JSON file but record remains in offline until you click on remove.</li></ol>",
+            "<b>Table Summary: -</b> Different summary shall be provided for 'Exports with payment of tax' and 'Exports without payment of tax'. Table summary shall be updated based on the documents which you have added/imported through JSON/Excel/CSV in this table."
+        ],
+        "helptextErrFlow":[
+            "1. After successful import of error JSON file, error documents shall be displayed in relevant table. Error message shall be displayed in ‘GST portal validation error’ column.",
+            "2. To correct the records, click on ‘Edit’ symbol in Action column. On click of ‘Edit’ full document details (including Item details) shall be displayed. Click on ‘Save document’ after correcting the relevant error in the document.",
+            "<b>Note:</b> Error message in ‘GST portal validation error’ column shall be removed on click of ‘Save document’ though not corrected and clicked on ‘Save document’.",
+            
+            "The following options shall be displayed at the top of the page:",
+            "<b>Remove error data in selected table:</b> On click of this button, all records which are not corrected, shall be removed from tool and the same can’t be retrieved. <br>To remove corrected records, please navigate to relevant table, then please click on ‘select all’ check box and click on ‘Remove’ button or click on ‘Remove button in Action column. Record(s) will be removed from error flow and main flow (Prepare Offline) as well.",
+            "<b>Generate JSON file to upload: </b>Click on this button, to generate the JSON file.",
+            "<b>Export to excel:</b> On click of this button, offline tool shall generate the details in an Excel format. The file may be imported again after correction of errors using ‘Import Excel/CSV’ facility in ‘Prepare Offline’ flow."
+        ],
+        "showmore": true
+    },
+    "aoscommon/sez": {
+        "helptext": [
+            "1. All supplies made to SEZ units / developers shall be reported in this table depending upon whether the supplies are made with payment or without payment of tax respectively.",
+            "2. In case of supplies made with payment of tax, the supplier will have an option to select if the supplier or the SEZ units / developers will claim refund on such supplies. If the supplier is not availing refund, only then the SEZ units / developers will be eligible to avail input tax credit and claim refund for such credit after exports by them.",
+            "<b>Follow the below steps to add the document in this table:</b>",
+            "<ol><li>Fill up all mandatory fields in 'Add document' table and click on '+' symbol available in Action field to add the item details.If supply to SEZ with payment of tax, then select 'SEZ supplies with payment' option from the 'GST payment type' column else select 'SEZ supplies without payment' option from the 'GST payment type' column</li><li>HSN code wise details are mandatory in item details table. Enter the item details by HSN code wise and click on 'save document'.  </li><li>You can check the successfully saved record(s)/document(s) in 'Document added' table</li></ol>",
+            "<b>Edit/delete/remove</b>",
+            "<ol><li>You can edit the successfully saved record any time by clicking on edit symbol available in Action column in 'Documents added' table.</li><li>On click of edit symbol, record shall be available for edit in 'Add document' table</li><li>On click of Remove button, record shall be removed from the Offline tool</li><li>On click of delete button, record shall be removed from the portal only after successful upload of JSON file but record remain exist in offline until you click on remove</li></ol>",
+            "<b>Table Summary: -</b> Different summary shall be provided for 'SEZ supplies with payment of tax' and 'SEZ supplies without payment of tax'. Table summary shall be updated based on the documents which you have added/imported through JSON/Excel/CSV in this table."
+        ],
+        "helptextErrFlow":[ 
+            "1. After successful import of error JSON file, error documents shall be displayed in relevant table. Error message shall be displayed in ‘GST portal validation error’ column.",
+            "2. To correct the records, click on ‘Edit’ symbol in Action column. On click of ‘Edit’ full document details (including Item details) shall be displayed. Click on ‘Save document’ after correcting the relevant error in the document.",
+            "<b>Note:</b> Error message in ‘GST portal validation error’ column shall be removed on click of ‘Save document’ though not corrected and clicked on ‘Save document’.",
+            
+            "The following options shall be displayed at the top of the page:",
+            "<b>Remove error data in selected table:</b> On click of this button, all records which are not corrected, shall be removed from tool and the same can’t be retrieved. <br>To remove corrected records, please navigate to relevant table, then please click on ‘select all’ check box and click on ‘Remove’ button or click on ‘Remove button in Action column. Record(s) will be removed from error flow and main flow (Prepare Offline) as well.",
+            "<b>Generate JSON file to upload: </b>Click on this button, to generate the JSON file.",
+            "<b>Export to excel:</b> On click of this button, offline tool shall generate the details in an Excel format. The file may be imported again after correction of errors using ‘Import Excel/CSV’ facility in ‘Prepare Offline’ flow."],
+        "showmore": true
+    },
+    "aoscommon/de": {
+        "helptext": [
+            "1. All supplies treated as deemed exports shall be reported in this table.",
+            "2. Supplier shall declare whether refund will be claimed by him or the recipient of deemed export supplies will be availing refund on such supplies. If refund is to be claimed by the supplier, then recipient will not be eligible to avail input tax credit on such supplies.",
+            "<b>Follow the below steps to add the document in this table:</b>",
+            "<ol><li>Fill up all mandatory fields in 'Add document' table and click on '+' symbol available in Action field to add the item details.If outward supply is subjected to  differential percentage of tax rate (65% of the actual tax rate), then select the 'Differential % of tax rate' check box.</li><li>HSN code wise details are mandatory in item details table. Enter the item details by HSN code wise and click on 'save document'. </li><li>You can check the successfully saved record(s)/document(s) in 'Document added' table</li></ol>",
+            "<b>Edit/delete/remove</b>",
+            "<ol><li>You can edit the successfully saved record any time by clicking on 'Edit' symbol available in Action column in 'Documents added' table.</li><li>On click of edit symbol, record shall be available for edit in 'Add document' table</li><li>On click of Remove button, record shall be removed from the Offline tool</li><li>On click of delete button, record shall be removed from the portal only after successful upload of JSON file but record remains in offline until you click on remove.</li></ol>",
+            "<b>Table Summary: -</b> Table summary shall be updated based on the documents which you have added/imported through JSON/Excel/CSV in this table."
+        ],
+        "helptextErrFlow":[
+            "1. After successful import of error JSON file, error documents shall be displayed in relevant table. Error message shall be displayed in ‘GST portal validation error’ column.",
+            "2. To correct the records, click on ‘Edit’ symbol in Action column. On click of ‘Edit’ full document details (including Item details) shall be displayed. Click on ‘Save document’ after correcting the relevant error in the document.",
+            "<b>Note:</b> Error message in ‘GST portal validation error’ column shall be removed on click of ‘Save document’ though not corrected and clicked on ‘Save document’.",
+            
+            "The following options shall be displayed at the top of the page:",
+            "<b>Remove error data in selected table:</b> On click of this button, all records which are not corrected, shall be removed from tool and the same can’t be retrieved. <br>To remove corrected records, please navigate to relevant table, then please click on ‘select all’ check box and click on ‘Remove’ button or click on ‘Remove button in Action column. Record(s) will be removed from error flow and main flow (Prepare Offline) as well.",
+            "<b>Generate JSON file to upload: </b>Click on this button, to generate the JSON file.",
+            "<b>Export to excel:</b> On click of this button, offline tool shall generate the details in an Excel format. The file may be imported again after correction of errors using ‘Import Excel/CSV’ facility in ‘Prepare Offline’ flow."
+        ],
+        "showmore": true
+    },
+    "aoscommon/imps": {
+        "helptext": [
+            "1. Import of services shall be reported in this table. The value of supplies shall be net of debit / credit notes and advances paid on which tax has already been paid at the time of payment of advance, if any. ",
+            "2. The amount of advance paid has to be declared in the month in which the same was paid. Invoice wise details are not required to be reported in this table.","3. Services received from SEZ units / developers shall not be reported in this table.","4. Where only advance has been paid to the supplier, on reporting the same, the credit shall flow to the main return (FORM GST RET-1) and shall be reversed in table 4 of the said return. This credit can be availed of only on receipt of the supply and issue of invoice by the supplier.",
+            "<b>Follow the below steps to add the document in this table:</b>",
+            "<ol><li>Select the relevant POS from the 'Place of Supply (Name of State/UT)' field and click on '+' symbol available in Action field to add the item details.</li><li>HSN code wise details are mandatory in item details table. Enter the item details by HSN code wise and click on 'save document'.  </li><li>You can check the successfully saved record(s)/document(s) in 'Document added' table</li></ol>",
+            "<b>Edit/delete/remove</b>",
+            "<ol><li>You can edit the successfully saved record any time by clicking on edit symbol available in Action column in 'Documents added' table.</li><li>On click of edit symbol, record shall be available for edit in 'Add document' table.</li><li>On click of Remove button, record shall be removed from the Offline tool.</li><li>On click of delete button, record shall be removed from the portal only after successful upload of JSON file but record remains in offline until you click on remove</li></ol>",
+            "<b>Table Summary: -</b> Table summary shall be updated based on the documents which you have added/imported through JSON/Excel/CSV in this table."
+        ],
+        "helptextErrFlow":[
+            "1. After successful import of error JSON file, error documents shall be displayed in relevant table. Error message shall be displayed in ‘GST portal validation error’ column.",
+            "2. To correct the records, click on ‘Edit’ symbol in Action column. On click of ‘Edit’ full document details (including Item details) shall be displayed. Click on ‘Save document’ after correcting the relevant error in the document.",
+            "<b>Note:</b> Error message in ‘GST portal validation error’ column shall be removed on click of ‘Save document’ though not corrected and clicked on ‘Save document’.",
+            
+            "The following options shall be displayed at the top of the page:",
+            "<b>Remove error data in selected table:</b> On click of this button, all records which are not corrected, shall be removed from tool and the same can’t be retrieved. <br>To remove corrected records, please navigate to relevant table, then please click on ‘select all’ check box and click on ‘Remove’ button or click on ‘Remove button in Action column. Record(s) will be removed from error flow and main flow (Prepare Offline) as well.",
+            "<b>Generate JSON file to upload: </b>Click on this button, to generate the JSON file.",
+            "<b>Export to excel:</b> On click of this button, offline tool shall generate the details in an Excel format. The file may be imported again after correction of errors using ‘Import Excel/CSV’ facility in ‘Prepare Offline’ flow."
+        ],
+        "showmore": true
+    },
+    "aoscommon/impg": {
+        "helptext": [
+            "1. Details of taxes paid on import of goods shall be reported in this table. These goods have already suffered IGST at the time of import and are not subjected to taxation in this return. ",
+            "2. The exact amount of IGST and Cess paid at the port of import may be reported here, to avail input tax credit.",
+            "3. Any reversal on account of in-eligibility of credit or otherwise is to be reported in table 4B of the return (FORM GST RET-1).",
+           
+            "<b>Follow the below steps to add the document in this table:</b>",
+            "<ol><li>Fill up all mandatory fields in 'Add document' table and click on '+' symbol available in Action field to add the item details.</li><li>HSN code wise details are mandatory in item details table. Enter the item details by HSN code wise and click on 'save document'. </li><li>You can check the successfully saved record(s)/document(s) in 'Document added' table</li></ol>",
+            "<b>Edit/delete/remove</b>",
+            "<ol><li>You can edit the successfully saved record any time by clicking on edit symbol available in Action column in 'Documents added' table.</li><li>On click of edit symbol, record shall be available for edit in 'Add document' table</li><li>On click of Remove button, record shall be removed from the Offline tool</li><li>On click of delete button, record shall be removed from the portal only after successful upload of JSON file but record remains in offline until you click on remove</li></ol>",
+            "<b>Table Summary: -</b> Table summary shall be updated based on the documents which you have added/imported through JSON/Excel/CSV in this table."
+        ],
+        "helptextErrFlow":[
+            "1. After successful import of error JSON file, error documents shall be displayed in relevant table. Error message shall be displayed in ‘GST portal validation error’ column.",
+            "2. To correct the records, click on ‘Edit’ symbol in Action column. On click of ‘Edit’ full document details (including Item details) shall be displayed. Click on ‘Save document’ after correcting the relevant error in the document.",
+            "<b>Note:</b> Error message in ‘GST portal validation error’ column shall be removed on click of ‘Save document’ though not corrected and clicked on ‘Save document’.",
+            
+            "The following options shall be displayed at the top of the page:",
+            "<b>Remove error data in selected table:</b> On click of this button, all records which are not corrected, shall be removed from tool and the same can’t be retrieved. <br>To remove corrected records, please navigate to relevant table, then please click on ‘select all’ check box and click on ‘Remove’ button or click on ‘Remove button in Action column. Record(s) will be removed from error flow and main flow (Prepare Offline) as well.",
+            "<b>Generate JSON file to upload: </b>Click on this button, to generate the JSON file.",
+            "<b>Export to excel:</b> On click of this button, offline tool shall generate the details in an Excel format. The file may be imported again after correction of errors using ‘Import Excel/CSV’ facility in ‘Prepare Offline’ flow."
+        ],
+        "showmore": true
+    },
+    "aoscommon/impgsez": {
+        "helptext": [
+            "1. Goods received from SEZ units / developers on Bill of Entry shall be reported in this table by the recipient. These goods have already suffered IGST at the time of clearance into DTA and have been cleared on a Bill of Entry and are not subjected to taxation in this return.",
+            "2. SEZ units / developers making such supplies shall not include such outward supplies in table 3B. ",
+          
+            "<b>Follow the below steps to add the document in this table:</b>",
+            "<ol><li>Fill up all mandatory fields in 'Add document' table and click on '+' symbol available in Action field to add the Item details.</li><li>HSN code wise details are mandatory in item details table. Enter the item details by HSN code wise and click on 'save document'. </li><li>You can check the successfully saved record(s)/document(s) in 'Document added' table</li></ol>",
+            "<b>Edit/delete/remove</b>",
+            "<ol><li>You can edit the successfully saved record any time by clicking on edit symbol available in Action column in 'Documents added' table.</li><li>On click of edit symbol, record shall be available for edit in 'Add document' table</li><li>On click of Remove button, record shall be removed from the Offline tool</li><li>On click of delete button, record shall be removed from the portal only after successful upload of JSON file but record remains in offline until you click on remove.</li></ol>",
+            "<b>Table Summary: -</b>Table summary shall be updated based on the documents which you have added/imported through JSON/Excel/CSV in this table."
+        ],
+        "helptextErrFlow":[
+            "1. After successful import of error JSON file, error documents shall be displayed in relevant table. Error message shall be displayed in ‘GST portal validation error’ column.",
+            "2. To correct the records, click on ‘Edit’ symbol in Action column. On click of ‘Edit’ full document details (including Item details) shall be displayed. Click on ‘Save document’ after correcting the relevant error in the document.",
+            "<b>Note:</b> Error message in ‘GST portal validation error’ column shall be removed on click of ‘Save document’ though not corrected and clicked on ‘Save document’.",
+            
+            "The following options shall be displayed at the top of the page:",
+            "<b>Remove error data in selected table:</b> On click of this button, all records which are not corrected, shall be removed from tool and the same can’t be retrieved. <br>To remove corrected records, please navigate to relevant table, then please click on ‘select all’ check box and click on ‘Remove’ button or click on ‘Remove button in Action column. Record(s) will be removed from error flow and main flow (Prepare Offline) as well.",
+            "<b>Generate JSON file to upload: </b>Click on this button, to generate the JSON file.",
+            "<b>Export to excel:</b> On click of this button, offline tool shall generate the details in an Excel format. The file may be imported again after correction of errors using ‘Import Excel/CSV’ facility in ‘Prepare Offline’ flow."
+        ],
+        "showmore": true
+    },
+    "aoscommon/missinginv": {
+        "helptext": [
+            "1.The recipient shall provide document wise details of the supplies for which credit has been claimed but the details of supplies are yet to be uploaded by the supplier(s) concerned as detailed below: <br><ul><li>Where the supplier has failed to report the supplies after a lapse of two tax periods in case of monthly return filers and after a lapse of one tax period in case of quarterly return filers.</li><li>Where the supplier uploads the invoice subsequently (after reporting in this table by the recipient), then such credit has to be reversed by the recipient in table 4B(3) of the main return (FORM GST RET-1) as this credit cannot be availed twice.For example – In a case where the supplier has made a supply in April but has not reported the same in FORM GST ANX-1 till 10th  May and the recipient has claimed input tax credit by reporting the same in the main return (FORM GST RET-1) in table 4A(10), reporting is required in the following situation: Where the supplier concerned has not uploaded the invoices in FORM GST ANX-1 of April, May or June tax period till 10th  July, the recipient shall report the same, document wise in this table in FORM GST ANX-1 of June tax period after 11th July.</li></ul>",
+           
+            "<b>Follow the below steps to add the document in this table:</b>",
+            "<ol><li>Fill up all mandatory fields in 'Add document' table and click on '+' symbol available in Action field to add the Item details.Select the relevant outward supply from the 'Supply relates to table' drop down.If outward supply is subjected to differential percentage of tax rate (65% of the actual tax rate) or Supply covered under sec. 7 of IGST Act, then click on relevant check box.</li><li>HSN code wise details are not mandatory in item details table. Enter the item details either by HSN code wise or tax rate wise and click on 'save document'.</li><li>You can check the successfully saved record(s)/document(s) in 'Document added' table</li></ol>",
+            "<b>Edit/delete/remove</b>",
+            "<ol><li>You can edit the successfully saved record any time by clicking on edit symbol available in Action column in 'Documents added' table.</li><li>On click of edit symbol, record shall be available for edit in 'Add document' table</li><li>On click of Remove button, record shall be removed from the Offline tool</li><li>On click of delete button, record shall be removed from portal only after successful upload of JSON file but record remains in offline until you click on remove</li></ol>",
+            "<b>Table Summary: -</b>Table summary shall be updated based on the documents which you have added/imported through JSON/Excel/CSV in this table."
+        ],
+        "helptextErrFlow":[
+            "1. After successful import of error JSON file, error documents shall be displayed in relevant table. Error message shall be displayed in ‘GST portal validation error’ column.",
+            "2. To correct the records, click on ‘Edit’ symbol in Action column. On click of ‘Edit’ full document details (including Item details) shall be displayed. Click on ‘Save document’ after correcting the relevant error in the document.",
+            "<b>Note:</b> Error message in ‘GST portal validation error’ column shall be removed on click of ‘Save document’ though not corrected and clicked on ‘Save document’.",
+            
+            "The following options shall be displayed at the top of the page:",
+            "<b>Remove error data in selected table:</b> On click of this button, all records which are not corrected, shall be removed from tool and the same can’t be retrieved. <br>To remove corrected records, please navigate to relevant table, then please click on ‘select all’ check box and click on ‘Remove’ button or click on ‘Remove button in Action column. Record(s) will be removed from error flow and main flow (Prepare Offline) as well.",
+            "<b>Generate JSON file to upload: </b>Click on this button, to generate the JSON file.",
+            "<b>Export to excel:</b> On click of this button, offline tool shall generate the details in an Excel format. The file may be imported again after correction of errors using ‘Import Excel/CSV’ facility in ‘Prepare Offline’ flow."
+        ],
+        "showmore": true
+    },
+    "aoscommon/ecom": {
+        "helptext": [
+            "Supplies made through e-commerce operators liable to collect tax under section 52 shall be reported at the consolidated level in this table even though these supplies have already been reported in table 3.",
+            "<b>Follow the below steps to add the document in this table:</b>",
+            "<ol><li>Total outward supplies made through a specific E-commerce operator shall be reported in 'Value of supplies made' field</li><li>Outward supplies made through E-commerce operator and returned in current tax period shall be reported in 'Value of supplies returned' column.</li><li>'Net value of supplies' shall be auto filled.</li><li>Fill the tax columns and click on '+' symbol to add another outward supplies through E-commerce operator else click on 'Save document'</li><li>You can check the successfully saved record(s)/document(s) in 'Document added' table</li></ol>",
+            "<b>Edit/delete/remove</b>",
+            "<ol><li>You can edit the successfully saved record any time by clicking on edit symbol available in Action column in 'Documents added' table.</li><li>On click of edit symbol, record shall be available for edit in 'Add document' table</li><li>On click of Remove button, record shall be removed from the Offline tool</li><li>On click of delete button, record shall be removed from the portal only after successful upload of JSON file but record remains in offline until you click on remove.</li></ol>",
+            "<b>Table Summary: -</b>Table summary shall be updated based on the documents which you have added/imported through JSON/Excel/CSV in this table."
+        ],
+        "helptextErrFlow":[
+            "1. After successful import of error JSON file, error documents shall be displayed in relevant table. Error message shall be displayed in ‘GST portal validation error’ column.",
+            "2. To correct the records, click on ‘Edit’ symbol in Action column. On click of ‘Edit’ full document details (including Item details) shall be displayed. Click on ‘Save document’ after correcting the relevant error in the document.",
+            "<b>Note:</b> Error message in ‘GST portal validation error’ column shall be removed on click of ‘Save document’ though not corrected and clicked on ‘Save document’.",
+            
+            "The following options shall be displayed at the top of the page:",
+            "<b>Remove error data in selected table:</b> On click of this button, all records which are not corrected, shall be removed from tool and the same can’t be retrieved. <br>To remove corrected records, please navigate to relevant table, then please click on ‘select all’ check box and click on ‘Remove’ button or click on ‘Remove button in Action column. Record(s) will be removed from error flow and main flow (Prepare Offline) as well.",
+            "<b>Generate JSON file to upload: </b>Click on this button, to generate the JSON file.",
+            "<b>Export to excel:</b> On click of this button, offline tool shall generate the details in an Excel format. The file may be imported again after correction of errors using ‘Import Excel/CSV’ facility in ‘Prepare Offline’ flow."
+        ],
+        "showmore": true
+    },
+    "aoiscommon":{
+        "helptext": ["The following five options shall be displayed at the top of this page: -", 
+        "<b><u> Open downloaded JSON file: -</u></b> Click on this button to download  ANX-2 JSON file in to the Offline Tool. Upon successful processing of file, the details would be populated to respective Tables.",
+        "<b><u>Remove Data in all tables: -</u></b> Taxpayer can use this option to remove the records from all tables of the tool which has been imported in tool through opening of JSON file. The action (Remove) once exercised can’t be reversed later. Actions, if any taken will be lost and cannot be recovered.",
+        "<b><u> Matching Tool: -</u></b> Taxpayer can use this option to navigate to matching tool (Match Annexure of inward supplies GST ANX-2 with your purchase register) in order to do matching with the purchase register.", 
+        "<b><u> Export to Excel: -</u></b>  Taxpayer can use this option to export the details as available in offline tool to an excel file. On click of this button, offline tool shall generate the details in an Excel format.",
+        "<b><u> Generate JSON file to upload: -</u></b> To generate JSON file for upload of GST ANX-2 details prepared offline on the GST portal.",
+        "<b><u> Select Table for Taking Actions : -</u></b>Taxpayer to use this option to view and take action on records as available in various tables. Taxpayer can select the relevant table by clicking on dropdown option. Below mentioned list shall be displayed on clicking of the dropdown based on availability of records under each table.",
+        "<ul><li> 3A - (3B) - Supplies from registered persons (B2B)</li><li>3A - (3E) - SEZ supplies with payment (SEZWP)</li><li>3A - (3F) - SEZ supplies without payment (SEZWOP)</li><li>3A - (3G) - Deemed Exports (DE) </li><li>5 - ISD credit received (ISDC)</li></ul>",
+        "<b><u> View Summary of GST ANX-2: -</u></b> Taxpayer can view the summary of details auto-drafted in tables 3A and 5. This table shall be updated based on the action taken (Status as per portal and/or ‘Action taken’ column) in table 3A. Table 5 shall not have any status column. Default summary shall be displayed for all the actions (Accepted/Rejected/Pending). However, you can change the summary type by clicking on ‘drop down’ option in Action taken field. Taxpayer can view the summary by the following four methods, one at a time:",
+        "<ul><li>All</li><li>Accepted</li><li>Rejected</li><li>Pending</li></ul>",
+        "<b><u> View Table 4 of GST ANX-2: -</u></b> On click of this button, offline tool navigates to Table 4 of GST ANX-2. Offline tool shall auto fill the details in this table based on the details and action taken in various tables. This table will be non-editable.",
+        "<b><u> View draft return: -</u></b> On click of this button, offline tool navigates to the ‘Draft return’. Offline tool will auto fill the details in draft return page based on the details available and action taken in various tables. This table will be non- editable."
+        ],
+        "helptextErrFlow":[
+            "1. You can correct error records here. To correct the errors, select table form the drop down of ‘Select table for taking actions’. After error has been corrected, this record shall be available in ‘Take Action’ Flow as well as ‘Error Flow’",
+            "2. After you have corrected errors in the record(s), click on ‘Generate JSON file to upload’ button to generate the JSON file.",
+
+            "The following functionalities are available:",
+
+            "<b>Open Error JSON file:</b> Use this button to open new Error JSON File. On click of this button, all existing records with errors shall be removed from tool and records in new file will be imported",
+            "<b>Remove error data in all tables:</b> On click of this button, all records with error shall be removed from all tables in the tool and the same can’t be retrieved.", 
+            "<b>Export to excel:</b> On click of this button, offline tool shall generate the details in an Excel format. This is just for record purpose, no action can be taken in the file.", 
+            "<b>Generate JSON file to upload:</b> Click on this button to generate the JSON file with all the records that have been corrected."
+        ],
+        "showmore": true
+    },
+    "aoiscommon/aois":{
+        "helptext": ["The following five options shall be displayed at the top of this page: -", 
+        "<b><u> Open downloaded JSON file: -</u></b> Click on this button to download  ANX-2 JSON file in to the Offline Tool. Upon successful processing of file, the details would be populated to respective Tables.",
+        "<b><u>Remove Data in all tables: -</u></b> Taxpayer can use this option to remove the records from all tables of the tool which has been imported in tool through opening of JSON file. The action (Remove) once exercised can’t be reversed later. Actions, if any taken will be lost and cannot be recovered.",
+        "<b><u> Matching Tool: -</u></b> Taxpayer can use this option to navigate to matching tool (Match Annexure of inward supplies GST ANX-2 with your purchase register) in order to do matching with the purchase register.", 
+        "<b><u> Export to Excel: -</u></b>  Taxpayer can use this option to export the details as available in offline tool to an excel file. On click of this button, offline tool shall generate the details in an Excel format.",
+        "<b><u> Generate JSON file to upload: -</u></b> To generate JSON file for upload of GST ANX-2 details prepared offline on the GST portal.",
+        "<b><u> Select Table for Taking Actions : -</u></b>Taxpayer to use this option to view and take action on records as available in various tables. Taxpayer can select the relevant table by clicking on dropdown option. Below mentioned list shall be displayed on clicking of the dropdown based on availability of records under each table.",
+        "<ul><li> 3A - (3B) - Supplies from registered persons (B2B)</li><li>3A - (3E) - SEZ supplies with payment (SEZWP)</li><li>3A - (3F) - SEZ supplies without payment (SEZWOP)</li><li>3A - (3G) - Deemed Exports (DE) </li><li>5 - ISD credit received (ISDC)</li></ul>",
+        "<b><u> View Summary of GST ANX-2: -</u></b> Taxpayer can view the summary of details auto-drafted in tables 3A and 5. This table shall be updated based on the action taken (Status as per portal and/or ‘Action taken’ column) in table 3A. Table 5 shall not have any status column. Default summary shall be displayed for all the actions (Accepted/Rejected/Pending). However, you can change the summary type by clicking on ‘drop down’ option in Action taken field. Taxpayer can view the summary by the following four methods, one at a time:",
+        "<ul><li>All</li><li>Accepted</li><li>Rejected</li><li>Pending</li></ul>",
+        "<b><u> View Table 4 of GST ANX-2: -</u></b> On click of this button, offline tool navigates to Table 4 of GST ANX-2. Offline tool shall auto fill the details in this table based on the details and action taken in various tables. This table will be non-editable.",
+        "<b><u> View draft return: -</u></b> On click of this button, offline tool navigates to the ‘Draft return’. Offline tool will auto fill the details in draft return page based on the details available and action taken in various tables. This table will be non- editable."
+        ],
+        "helptextErrFlow":[
+            "1. You can correct error records here. To correct the errors, select table form the drop down of ‘Select table for taking actions’. After error has been corrected, this record shall be available in ‘Take Action’ Flow as well as ‘Error Flow’",
+            "2. After you have corrected errors in the record(s), click on ‘Generate JSON file to upload’ button to generate the JSON file.",
+
+            "The following functionalities are available:",
+            
+            "<b>Open Error JSON file:</b> Use this button to open new Error JSON File. On click of this button, all existing records with errors shall be removed from tool and records in new file will be imported",
+            "<b>Remove error data in all tables:</b> On click of this button, all records with error shall be removed from all tables in the tool and the same can’t be retrieved.", 
+            "<b>Export to excel:</b> On click of this button, offline tool shall generate the details in an Excel format. This is just for record purpose, no action can be taken in the file.", 
+            "<b>Generate JSON file to upload:</b> Click on this button to generate the JSON file with all the records that have been corrected."
+        ],
+        "showmore": true
+    },
+    "aoiscommon/aoisb2b":{
+        "helptext": [
+               "All the inward supplies received by recipient from the registered persons (i.e. B2B) shall be auto-drafted in this table based on JSON file opened in the offline tool. Inward supplies shall be displayed in this table in two ways:" ,
+               "<ul><li>Supplier wise</li><li>Document wise</li></ul>",
+               "<b><u>Supplier wise view:</u></b>",
+               "On supplier wise view, the details shall be clubbed together based on ‘GSTIN of Supplier’ and ‘Supplier’s tax period’. There should be a ‘+’ symbol beside the GSTIN, on click of which, document wise view shall be displayed for such GSTIN. There shall be downward arrow symbol available on the document number, in case there are HSN wise details for such document. on click of this downward symbol, the HSN wise details shall be displayed.",
+               "The taxpayer can take action on individual document wise, or GSTIN wise or for all records for a particular page.",
+               "If the action is taken at GSTIN level, the action taken at GSTIN level shall have the same action on all the documents of that GSTIN. The action can also be taken at document wise. Action taken at document wise can have different action for each document. Action can also be taken for all GSTIN at one go. For taking action, click on the relevant radio button and then click on ‘Confirm’ button. Once the actions are confirmed, the ‘Action taken’ column shall be updated based on the action taken. ",
+               "If you want to ‘Reset’ the action, then select the records either at GSTIN or document level by enabling the checkbox on ‘Select All’ column and then click on ‘Reset’ button. Based on the confirmation, the ‘Action taken’ column shall be updated with the ‘reset’ action. The action can be changed any number of times, and the last action taken shall be updated in the ‘Action taken’ column.",
+               "<table border='1' cellpadding='3px' align='center'><tr><th><b>Action</b></th><th><b>On click of relevant radio button</b>&nbsp &nbsp &nbsp</th><th><b>Action Taken</b></th></tr><tr><td>For accepting the document</td><td align='center'>Accept</td><td align='center'>Accepted</td></tr><tr><td>For rejecting the document</td><td align='center'>Reject</td><td align='center'>Rejected</td></tr><tr><td>For keeping the document pending </td><td align='center'>Pending</td> <td align='center'>Pending</td></tr><tr><td>To reset the existing action</td><td align='center'> </td> <td align='center'>Reset</td></tr></table>",
+               "<b><u>Document wise view:</u></b>",
+               "On document wise view, the details shall be available document wise. There should be a downward symbol on the document number, on click of which, HSN wise records of a particular document shall be displayed. Taxpayer can use upward symbol option to hide the HSN wise records which were displayed.",
+               "The taxpayer can take action on individual document wise or by selecting all records in that particular page.",
+               "Once the action has been taken, the Action taken column shall be updated with the following words",
+               "<table border='1' cellpadding='3px' align='center'><tr><th><b>Action</b></th><th><b>On click of relevant radio button</b>&nbsp &nbsp &nbsp </th><th><b>Action Taken</b></th></tr><tr><td>For accepting the document</td><td align='center'>Accept</td><td align='center'>Accepted</td></tr><tr><td>For rejecting the document</td><td align='center'>Reject</td><td align='center'>Rejected</td></tr><tr><td>For keeping the document pending </td><td align='center'>Pending</td> <td align='center'>Pending</td></tr><tr><td>To reset the existing action</td><td align='center'> </td> <td align='center'>Reset</td></tr></table>",
+               "The action taken column shall be independent of the column of ‘Status as per portal’ column. ‘Status as per portal’ column shall be read only.  Once the action has been taken, the summary displayed on the top of the table shall be changed as per the ‘action taken’ column. Action can be taken any number of times and there shall be no restriction",
+               "By default, the ‘Action taken’ column of all documents in Table 3A shall have ‘(blank)’ status. Summaries, Table 4 of GST ANX-2 and draft return shall be drafted based on the same. The action which are taken in the offline tool shall be updated in the column ‘Action taken’ column.",
+               "The Taxpayer can view the matching results once matching is done and there will be a hyperlink to show the reason of mismatch, if any",
+               "<b><u>Table Summary:- </u></b> Taxpayer can view the table summary based for each GSTIN based on the action taken. i.e. number of documents with Accepted, Rejected or Pending action and the total tax amount involved. The tax amount shall be net of debit and credit notes. You can also click on particular GSTIN in the table summary to view the records for the selected GSTIN",
+               "<b><u>View Summary:- </u></b> Taxpayer can click on this option, to navigate to the view summary option available on the GST ANX-2 dashboard. ",
+               "<b><u>Matching Tool:- </u></b> Taxpayer can click on this option, to navigate to the matching tool, to match the details of GST ANX-2 with your purchase register. ",
+               "<b><u>Export to CSV:- </u></b> Taxpayer to click on this button, to export the details of the specific table in to CSV file.",
+               "<b><u>Search:- </u></b> Taxpayer can use this option to search, for a text/value, amount, the details of the respective table. Only the matching/relevant record shall be shown as output.",
+               "<b><u>Select number of records:- </u></b> Taxpayer can use this option to select number of records that can be displayed on one screen.",
+               "<b><u>Select columns to display/hide:- </u></b> Taxpayer can use this option to select the columns to be displayed/hidden. On selecting this option, taxpayer shall be displayed list of columns in that table and has option to deselect the columns he does not want to view. ",
+               "<b><u>Reset:- </u></b>  Taxpayer to select the document(s) by enabling the checkbox and then click on ‘Reset’ button to reset the action taken on such document(s). the action taken column shall be updated as ‘Reset’.",
+               "<b><u>Sorting option:- </u></b> All columns can be sorted in either ascending or descending order (A to Z, Min to Max) on click of sorting symbol.",
+               "<b><u>Filter option:- </u></b>Filter option shall be available on columns where the ‘filter’ symbol is available. The taxpayer can apply the filter option to see specific records based on such filter."
+        ],
+        "helptextErrFlow":[
+            "1. The error to be corrected in records is captured in ‘GST portal validation error’ column.",
+            "2. To correct the records, check the error message displayed in ‘GST Portal validation error’ column and take appropriate action",
+            "<b>Note:</b> Error message in ‘GST portal validation error’ column shall be removed post action has been revised and confirmed.",
+            "3. You may export the records to csv for record purpose using the button ‘Export to CSV’",
+            "After you have completed the error correction exercise, click ‘Back’ to go to dashboard page and select ‘Generate JSON file to Upload’."         
+        ],
+        "showmore": true 
+    },
+    "aoiscommon/isd":{
+        "helptext": [  
+            "In table 5 ‘ISD credits received’, no actions can be taken. It is for view only. The summary of table 5 shall be part of the downloaded JSON file from the portal and should not be calculated in the offline tool.",
+            "Taxpayer can use downward symbol option to view table summary of ISD records received for document type wise. Taxpayer can use upward symbol option to hide the table summary details for ISD records. ",
+            "Taxpayer can use the back button to go back to ANX-2 dashboard page.",
+            "<b><u>Table Summary:- </u></b>Table Summary will display the ISD records which have the main fields like Document type, No. of documents and Amount of ITC received.",
+            "<b><u>Search:- </u></b> Taxpayer can use this option to search, for a text/value, amount, the details of the respective table. Only the matching/relevant record will be shown as output.",
+            "<b><u>Select number of records:- </u></b>Taxpayer can use this option to select number of records that can be displayed on one screen. ",
+            "<b><u>Sorting option:- </u></b>All columns can be sorted in either ascending or descending order (A to Z, Min to Max) on click of sorting symbol. ",
+            "<b><u>Filter option:- </u></b>Filter option shall be available on columns where the ‘filter’ symbol is available. The taxpayer can apply the filter option to see specific records based on such filter"
+        ],
+        "showmore": false
+    },
+    "aoiscommon/sezwp":{
+        "helptext": [  
+            "All the inward supplies received by recipient from the registered persons (SEZWP) shall be auto-drafted in this table based on JSON file opened in the offline tool. Inward supplies shall be displayed in this table in two ways:" ,
+               "<ul><li>Supplier wise</li><li>Document wise</li></ul>",
+               "<b><u>Supplier wise view:</u></b>",
+               "On supplier wise view, the details shall be clubbed together based on ‘GSTIN of Supplier’ and ‘Supplier’s tax period’. There should be a ‘+’ symbol beside the GSTIN, on click of which, document wise view shall be displayed for such GSTIN. There shall be downward arrow symbol available on the document number, in case there are HSN wise details for such document. on click of this downward symbol, the HSN wise details shall be displayed.",
+               "The taxpayer can take action on individual document wise, or GSTIN wise or for all records for a particular page.",
+               "If the action is taken at GSTIN level, the action taken at GSTIN level shall have the same action on all the documents of that GSTIN. The action can also be taken at document wise. Action taken at document wise can have different action for each document. Action can also be taken for all GSTIN at one go. For taking action, click on the relevant radio button and then click on ‘Confirm’ button. Once the actions are confirmed, the ‘Action taken’ column shall be updated based on the action taken. ",
+               "If you want to ‘Reset’ the action, then select the records either at GSTIN or document level by enabling the checkbox on ‘Select All’ column and then click on ‘Reset’ button. Based on the confirmation, the ‘Action taken’ column shall be updated with the ‘reset’ action. The action can be changed any number of times, and the last action taken shall be updated in the ‘Action taken’ column.",
+               "<table border='1' cellpadding='3px' align='center'><tr><th><b>Action</b></th><th><b>On click of relevant radio button</b>&nbsp &nbsp &nbsp</th><th><b>Action Taken</b></th></tr><tr><td>For accepting the document</td><td align='center'>Accept</td><td align='center'>Accepted</td></tr><tr><td>For rejecting the document</td><td align='center'>Reject</td><td align='center'>Rejected</td></tr><tr><td>For keeping the document pending </td><td align='center'>Pending</td> <td align='center'>Pending</td></tr><tr><td>To reset the existing action</td><td align='center'> </td> <td align='center'>Reset</td></tr></table>",
+               "<b><u>Document wise view:</u></b>",
+               "On document wise view, the details shall be available document wise. There should be a downward symbol on the document number, on click of which, HSN wise records of a particular document shall be displayed. Taxpayer can use upward symbol option to hide the HSN wise records which were displayed.",
+               "The taxpayer can take action on individual document wise or by selecting all records in that particular page.",
+               "Once the action has been taken, the Action taken column shall be updated with the following words",
+               "<table border='1' cellpadding='3px' align='center'><tr><th><b>Action</b></th><th><b>On click of relevant radio button</b>&nbsp &nbsp &nbsp </th><th><b>Action Taken</b></th></tr><tr><td>For accepting the document</td><td align='center'>Accept</td><td align='center'>Accepted</td></tr><tr><td>For rejecting the document</td><td align='center'>Reject</td><td align='center'>Rejected</td></tr><tr><td>For keeping the document pending </td><td align='center'>Pending</td> <td align='center'>Pending</td></tr><tr><td>To reset the existing action</td><td align='center'> </td> <td align='center'>Reset</td></tr></table>",
+               "The action taken column shall be independent of the column of ‘Status as per portal’ column. ‘Status as per portal’ column shall be read only.  Once the action has been taken, the summary displayed on the top of the table shall be changed as per the ‘action taken’ column. Action can be taken any number of times and there shall be no restriction",
+               "By default, the ‘Action taken’ column of all documents in Table 3A shall have ‘(blank)’ status. Summaries, Table 4 of GST ANX-2 and draft return shall be drafted based on the same. The action which are taken in the offline tool shall be updated in the column ‘Action taken’ column.",
+               "The Taxpayer can view the matching results once matching is done and there will be a hyperlink to show the reason of mismatch, if any",
+               "<b><u>Table Summary:- </u></b> Taxpayer can view the table summary based for each GSTIN based on the action taken. i.e. number of documents with Accepted, Rejected or Pending action and the total tax amount involved. The tax amount shall be net of debit and credit notes. You can also click on particular GSTIN in the table summary to view the records for the selected GSTIN",
+               "<b><u>View Summary:- </u></b> Taxpayer can click on this option, to navigate to the view summary option available on the GST ANX-2 dashboard. ",
+               "<b><u>Matching Tool:- </u></b> Taxpayer can click on this option, to navigate to the matching tool, to match the details of GST ANX-2 with your purchase register. ",
+               "<b><u>Export to CSV:- </u></b> Taxpayer to click on this button, to export the details of the specific table in to CSV file.",
+               "<b><u>Search:- </u></b> Taxpayer can use this option to search, for a text/value, amount, the details of the respective table. Only the matching/relevant record shall be shown as output.",
+               "<b><u>Select number of records:- </u></b> Taxpayer can use this option to select number of records that can be displayed on one screen.",
+               "<b><u>Select columns to display/hide:- </u></b> Taxpayer can use this option to select the columns to be displayed/hidden. On selecting this option, taxpayer shall be displayed list of columns in that table and has option to deselect the columns he does not want to view. ",
+               "<b><u>Reset:- </u></b>  Taxpayer to select the document(s) by enabling the checkbox and then click on ‘Reset’ button to reset the action taken on such document(s). the action taken column shall be updated as ‘Reset’.",
+               "<b><u>Sorting option:- </u></b> All columns can be sorted in either ascending or descending order (A to Z, Min to Max) on click of sorting symbol.",
+               "<b><u>Filter option:- </u></b>Filter option shall be available on columns where the ‘filter’ symbol is available. The taxpayer can apply the filter option to see specific records based on such filter."
+                   ],
+        "helptextErrFlow":[
+            "1. The error to be corrected in records is captured in ‘GST portal validation error’ column.",
+            "2. To correct the records, check the error message displayed in ‘GST Portal validation error’ column and take appropriate action",
+            "<b>Note:</b> Error message in ‘GST portal validation error’ column shall be removed post action has been revised and confirmed.",
+            "3. You may export the records to csv for record purpose using the button ‘Export to CSV’",
+            "After you have completed the error correction exercise, click ‘Back’ to go to dashboard page and select ‘Generate JSON file to Upload’."         
+        ],
+        "showmore": true
+    },
+    "aoiscommon/sezwop":{
+        "helptext": [  
+            "All the inward supplies received by recipient from the registered persons (SEZWOP) shall be auto-drafted in this table based on JSON file opened in the offline tool. Inward supplies shall be displayed in this table in two ways:" ,
+               "<ul><li>Supplier wise</li><li>Document wise</li></ul>",
+               "<b><u>Supplier wise view:</u></b>",
+               "On supplier wise view, the details shall be clubbed together based on ‘GSTIN of Supplier’ and ‘Supplier’s tax period’. There should be a ‘+’ symbol beside the GSTIN, on click of which, document wise view shall be displayed for such GSTIN. There shall be downward arrow symbol available on the document number, in case there are HSN wise details for such document. on click of this downward symbol, the HSN wise details shall be displayed.",
+               "The taxpayer can take action on individual document wise, or GSTIN wise or for all records for a particular page.",
+               "If the action is taken at GSTIN level, the action taken at GSTIN level shall have the same action on all the documents of that GSTIN. The action can also be taken at document wise. Action taken at document wise can have different action for each document. Action can also be taken for all GSTIN at one go. For taking action, click on the relevant radio button and then click on ‘Confirm’ button. Once the actions are confirmed, the ‘Action taken’ column shall be updated based on the action taken. ",
+               "If you want to ‘Reset’ the action, then select the records either at GSTIN or document level by enabling the checkbox on ‘Select All’ column and then click on ‘Reset’ button. Based on the confirmation, the ‘Action taken’ column shall be updated with the ‘reset’ action. The action can be changed any number of times, and the last action taken shall be updated in the ‘Action taken’ column.",
+               "<table border='1' cellpadding='3px' align='center'><tr><th><b>Action</b></th><th><b>On click of relevant radio button</b>&nbsp &nbsp &nbsp</th><th><b>Action Taken</b></th></tr><tr><td>For accepting the document</td><td align='center'>Accept</td><td align='center'>Accepted</td></tr><tr><td>For rejecting the document</td><td align='center'>Reject</td><td align='center'>Rejected</td></tr><tr><td>For keeping the document pending </td><td align='center'>Pending</td> <td align='center'>Pending</td></tr><tr><td>To reset the existing action</td><td align='center'> </td> <td align='center'>Reset</td></tr></table>",
+               "<b><u>Document wise view:</b>",
+               "On document wise view, the details shall be available document wise. There should be a downward symbol on the document number, on click of which, HSN wise records of a particular document shall be displayed. Taxpayer can use upward symbol option to hide the HSN wise records which were displayed.",
+               "The taxpayer can take action on individual document wise or by selecting all records in that particular page.",
+               "Once the action has been taken, the Action taken column shall be updated with the following words",
+               "<table border='1' cellpadding='3px' align='center'><tr><th><b>Action</b></th><th><b>On click of relevant radio button</b>&nbsp &nbsp &nbsp </th><th><b>Action Taken</b></th></tr><tr><td>For accepting the document</td><td align='center'>Accept</td><td align='center'>Accepted</td></tr><tr><td>For rejecting the document</td><td align='center'>Reject</td><td align='center'>Rejected</td></tr><tr><td>For keeping the document pending </td><td align='center'>Pending</td> <td align='center'>Pending</td></tr><tr><td>To reset the existing action</td><td align='center'> </td> <td align='center'>Reset</td></tr></table>",
+               "The action taken column shall be independent of the column of ‘Status as per portal’ column. ‘Status as per portal’ column shall be read only.  Once the action has been taken, the summary displayed on the top of the table shall be changed as per the ‘action taken’ column. Action can be taken any number of times and there shall be no restriction",
+               "By default, the ‘Action taken’ column of all documents in Table 3A shall have ‘(blank)’ status. Summaries, Table 4 of GST ANX-2 and draft return shall be drafted based on the same. The action which are taken in the offline tool shall be updated in the column ‘Action taken’ column.",
+               "The Taxpayer can view the matching results once matching is done and there will be a hyperlink to show the reason of mismatch, if any",
+               "<b><u>Table Summary:- </u></b> Taxpayer can view the table summary based for each GSTIN based on the action taken. i.e. number of documents with Accepted, Rejected or Pending action and the total tax amount involved. The tax amount shall be net of debit and credit notes. You can also click on particular GSTIN in the table summary to view the records for the selected GSTIN",
+               "<b><u>View Summary:- </u></b> Taxpayer can click on this option, to navigate to the view summary option available on the GST ANX-2 dashboard. ",
+               "<b><u>Matching Tool:- </u></b> Taxpayer can click on this option, to navigate to the matching tool, to match the details of GST ANX-2 with your purchase register. ",
+               "<b><u>Export to CSV:- </u></b> Taxpayer to click on this button, to export the details of the specific table in to CSV file.",
+               "<b><u>Search:- </u></b> Taxpayer can use this option to search, for a text/value, amount, the details of the respective table. Only the matching/relevant record shall be shown as output.",
+               "<b><u>Select number of records:- </u></b> Taxpayer can use this option to select number of records that can be displayed on one screen.",
+               "<b><u>Select columns to display/hide:- </u></b> Taxpayer can use this option to select the columns to be displayed/hidden. On selecting this option, taxpayer shall be displayed list of columns in that table and has option to deselect the columns he does not want to view. ",
+               "<b><u>Reset:- </u></b>  Taxpayer to select the document(s) by enabling the checkbox and then click on ‘Reset’ button to reset the action taken on such document(s). the action taken column shall be updated as ‘Reset’.",
+               "<b><u>Sorting option:- </u></b> All columns can be sorted in either ascending or descending order (A to Z, Min to Max) on click of sorting symbol.",
+               "<b><u>Filter option:- </u></b>Filter option shall be available on columns where the ‘filter’ symbol is available. The taxpayer can apply the filter option to see specific records based on such filter."
+           
+        ],
+        "helptextErrFlow":[
+            "1. The error to be corrected in records is captured in ‘GST portal validation error’ column.",
+            "2. To correct the records, check the error message displayed in ‘GST Portal validation error’ column and take appropriate action",
+            "<b>Note:</b> Error message in ‘GST portal validation error’ column shall be removed post action has been revised and confirmed.",
+            "3. You may export the records to csv for record purpose using the button ‘Export to CSV’",
+            "After you have completed the error correction exercise, click ‘Back’ to go to dashboard page and select ‘Generate JSON file to Upload’."         
+        ],
+        "showmore": true 
+    },
+    "aoiscommon/de":{
+        "helptext": [  
+            "All the inward supplies received by recipient from the registered persons (DE) shall be auto-drafted in this table based on JSON file opened in the offline tool. Inward supplies shall be displayed in this table in two ways:" ,
+            "<ul><li>Supplier wise</li><li>Document wise</li></ul>",
+            "<b><u>Supplier wise view:</u></b>",
+            "On supplier wise view, the details shall be clubbed together based on ‘GSTIN of Supplier’ and ‘Supplier’s tax period’. There should be a ‘+’ symbol beside the GSTIN, on click of which, document wise view shall be displayed for such GSTIN. There shall be downward arrow symbol available on the document number, in case there are HSN wise details for such document. on click of this downward symbol, the HSN wise details shall be displayed.",
+            "The taxpayer can take action on individual document wise, or GSTIN wise or for all records for a particular page.",
+            "If the action is taken at GSTIN level, the action taken at GSTIN level shall have the same action on all the documents of that GSTIN. The action can also be taken at document wise. Action taken at document wise can have different action for each document. Action can also be taken for all GSTIN at one go. For taking action, click on the relevant radio button and then click on ‘Confirm’ button. Once the actions are confirmed, the ‘Action taken’ column shall be updated based on the action taken. ",
+            "If you want to ‘Reset’ the action, then select the records either at GSTIN or document level by enabling the checkbox on ‘Select All’ column and then click on ‘Reset’ button. Based on the confirmation, the ‘Action taken’ column shall be updated with the ‘reset’ action. The action can be changed any number of times, and the last action taken shall be updated in the ‘Action taken’ column.",
+            "<table border='1' cellpadding='3px' align='center'><tr><th><b>Action</b></th><th><b>On click of relevant radio button</b>&nbsp &nbsp &nbsp</th><th><b>Action Taken</b></th></tr><tr><td>For accepting the document</td><td align='center'>Accept</td><td align='center'>Accepted</td></tr><tr><td>For rejecting the document</td><td align='center'>Reject</td><td align='center'>Rejected</td></tr><tr><td>For keeping the document pending </td><td align='center'>Pending</td> <td align='center'>Pending</td></tr><tr><td>To reset the existing action</td><td align='center'> </td> <td align='center'>Reset</td></tr></table>",
+            "<b><u>Document wise view:</u></b>",
+            "On document wise view, the details shall be available document wise. There should be a downward symbol on the document number, on click of which, HSN wise records of a particular document shall be displayed. Taxpayer can use upward symbol option to hide the HSN wise records which were displayed.",
+            "The taxpayer can take action on individual document wise or by selecting all records in that particular page.",
+            "Once the action has been taken, the Action taken column shall be updated with the following words",
+            "<table border='1' cellpadding='3px' align='center'><tr><th><b>Action</b></th><th><b>On click of relevant radio button</b>&nbsp &nbsp &nbsp </th><th><b>Action Taken</b></th></tr><tr><td>For accepting the document</td><td align='center'>Accept</td><td align='center'>Accepted</td></tr><tr><td>For rejecting the document</td><td align='center'>Reject</td><td align='center'>Rejected</td></tr><tr><td>For keeping the document pending </td><td align='center'>Pending</td> <td align='center'>Pending</td></tr><tr><td>To reset the existing action</td><td align='center'> </td> <td align='center'>Reset</td></tr></table>",
+            "The action taken column shall be independent of the column of ‘Status as per portal’ column. ‘Status as per portal’ column shall be read only.  Once the action has been taken, the summary displayed on the top of the table shall be changed as per the ‘action taken’ column. Action can be taken any number of times and there shall be no restriction",
+            "By default, the ‘Action taken’ column of all documents in Table 3A shall have ‘(blank)’ status. Summaries, Table 4 of GST ANX-2 and draft return shall be drafted based on the same. The action which are taken in the offline tool shall be updated in the column ‘Action taken’ column.",
+            "The Taxpayer can view the matching results once matching is done and there will be a hyperlink to show the reason of mismatch, if any",
+            "<b><u>Table Summary:- </u></b> Taxpayer can view the table summary based for each GSTIN based on the action taken. i.e. number of documents with Accepted, Rejected or Pending action and the total tax amount involved. The tax amount shall be net of debit and credit notes. You can also click on particular GSTIN in the table summary to view the records for the selected GSTIN",
+            "<b><u>View Summary:- </u></b> Taxpayer can click on this option, to navigate to the view summary option available on the GST ANX-2 dashboard. ",
+            "<b><u>Matching Tool:- </u></b> Taxpayer can click on this option, to navigate to the matching tool, to match the details of GST ANX-2 with your purchase register. ",
+            "<b><u>Export to CSV:- </u></b> Taxpayer to click on this button, to export the details of the specific table in to CSV file.",
+            "<b><u>Search:- </u></b> Taxpayer can use this option to search, for a text/value, amount, the details of the respective table. Only the matching/relevant record shall be shown as output.",
+            "<b><u>Select number of records:- </u></b> Taxpayer can use this option to select number of records that can be displayed on one screen.",
+            "<b><u>Select columns to display/hide:- </u></b> Taxpayer can use this option to select the columns to be displayed/hidden. On selecting this option, taxpayer shall be displayed list of columns in that table and has option to deselect the columns he does not want to view. ",
+            "<b><u>Reset:- </u></b>  Taxpayer to select the document(s) by enabling the checkbox and then click on ‘Reset’ button to reset the action taken on such document(s). the action taken column shall be updated as ‘Reset’.",
+            "<b><u>Sorting option:- </u></b> All columns can be sorted in either ascending or descending order (A to Z, Min to Max) on click of sorting symbol.",
+            "<b><u>Filter option:- </u></b>Filter option shall be available on columns where the ‘filter’ symbol is available. The taxpayer can apply the filter option to see specific records based on such filter."
+           
+        ],
+        "helptextErrFlow":[
+            "1. The error to be corrected in records is captured in ‘GST portal validation error’ column.",
+            "2. To correct the records, check the error message displayed in ‘GST Portal validation error’ column and take appropriate action",
+            "<b>Note:</b> Error message in ‘GST portal validation error’ column shall be removed post action has been revised and confirmed.",
+            "3. You may export the records to csv for record purpose using the button ‘Export to CSV’",
+            "After you have completed the error correction exercise, click ‘Back’ to go to dashboard page and select ‘Generate JSON file to Upload’."         
+        ],
+        "showmore": true
+    },
+    "aoiscommon/table4":{
+        "helptext": [
+            "This table displays the summary of input tax credit, based on the action taken in table 3A (B2B, SEZWP, SEZWOP and DE). ",
+            "The summary is displayed showing the credit based on documents which are rejected, kept pending or Accepted. This table is read-only no changes can be made."
+        ],
+
+        "showmore": false
+    },
+    "aoiscommon/dmr":{
+        "helptext": [
+            "This table displays the draft input tax credit that would be auto-drafted in Table 4(A) of Return based on the action take in table 3A (B2B, SEZWP, SEZWOP and DE) as well as details auto-drafted in Table 5 (ISD). ",
+            "This table is read-only no changes can be made."
+        ],
+        "showmore": false
+    },
+    "matdash":{
+        "helptext": [
+            "<ol><li>Purchase register can be imported by clicking on 'Import Excel/CSV' format. It should be in the format provided on GST portal.</li><li>The purchase register should be for the same tax period from which the taxpayer has navigated to the matching tool from the GST ANX-2.</li> <li>On successful import of purchase register, the summary of the purchase register shall be displayed. </li><li>In case, there are any error in the imported purchase register, ‘Download error file’ button shall be displayed, from which the error purchase register can be downloaded.</li><li>In case of re-upload of purchase register, only the details of latest purchase register shall be updated. The records of earlier purchase register shall be removed.</li><li>Before import of purchase register, the status bar will be in amber colour. After successful import of purchase register, the status bar will change to ‘Green colour’. </li> <li>You can click on the status bar to navigate directly to the particular screen. </li></ol><b>Summary of Purchase Register</b> <ol><li>You can remove the purchase register by clicking on 'Remove purchase register'.</li><li>You can view the purchase register details by clicking on 'View Purchase register'.<li>You can start the matching by clicking on 'Match' to match the details of Annexure of inward supplies with your purchase register.</li><li>The offline tool will automatically take the records of ANX-2 for the tax period from which you have navigated to the matching tool.</li></ol>"
+        ],
+        "showmore": false
+    },
+    "pregister":{
+        "helptext": [
+            "The purchase register can be viewed in two ways:<ul><li>Supplier wise</li><li>Document wise</li></ul>",
+            "<b><u>Supplier wise view:</u></b> On supplier wise view, the details shall be clubbed together based on ‘GSTIN of Supplier’. There should be a ‘+’ symbol beside the GSTIN, on click of which, document wise view shall be displayed for such GSTIN.",
+            "<b><u>Search:</u></b> Taxpayer can use this option to search, for a text/value, amount, the details of the respective table. Only the matching/relevant record shall be shown as output.",
+            "<b><u>Select number of records: :</u></b> Taxpayer can use this option to select number of records that can be displayed on one screen.",
+            "<b><u>Select columns to display/hide: </u></b> Taxpayer can use this option to select the columns to be displayed/hidden. On selecting this option, taxpayer shall be displayed list of columns in that table and has option to deselect the columns he does not want to view",
+            "<b>Detail view of Purchase register – Document wise</b>",
+            "<b><u>Document wise view: </b></u>",
+            "On document wise view, the details shall be available document wise.",
+            "<b><u>Search:</u></b> Taxpayer can use this option to search, for a text/value, amount, the details of the respective table. Only the matching/relevant record shall be shown as output.",
+            "<b><u>Select number of records: </u></b> Taxpayer can use this option to select number of records that can be displayed on one screen.",
+            "<b><u>Select columns to display/hide: </u></b> Taxpayer can use this option to select the columns to be displayed/hidden. On selecting this option, taxpayer shall be displayed list of columns in that table and has option to deselect the columns he does not want to view"
+        ],
+        "showmore": true
+    },
+    "mat":{
+        "helptext": [
+            "<ul><li>The consolidated summary of the matching tool is displayed bifurcated into different buckets based on the matching done on records as available across tables in ANX-2 with purchase register imported into the offline tool.</li><li>The table summary displays the matching for each table. You can click on hyperlink available in the table summary to see the detailed matching result for each bucket. </li> <li>If you wish to apply tolerance on tax amount or approximation logic on document number, then click on ‘Refine Matching result’ and set the tolerance from the drop-down.</li><li>If you wish to apply approximation on document number, then enable the checkbox for yes and matching would be done by applying approximation on document number. </li></ul>"           
+        ],
+        "showmore": false
+    },
+    "matdash;id=2":{
+        "helptext": [
+            "<ol><li>Purchase register can be imported by clicking on 'Import Excel/CSV' format. It should be in the format provided on GST portal.</li><li>The purchase register should be for the same tax period from which the taxpayer has navigated to the matching tool from the GST ANX-2.</li> <li>On successful import of purchase register, the summary of the purchase register shall be displayed. </li><li>In case, there are any error in the imported purchase register, ‘Download error file’ button shall be displayed, from which the error purchase register can be downloaded.</li><li>In case of re-upload of purchase register, only the details of latest purchase register shall be updated. The records of earlier purchase register shall be removed.</li><li>Before import of purchase register, the status bar will be in amber colour. After successful import of purchase register, the status bar will change to ‘Green colour’. </li> <li>You can click on the status bar to navigate directly to the particular screen. </li></ol><b>Summary of Purchase Register</b> <ol><li>You can remove the purchase register by clicking on 'Remove purchase register'.</li><li>You can view the purchase register details by clicking on 'View Purchase register'.<li>You can start the matching by clicking on 'Match' to match the details of Annexure of inward supplies with your purchase register.</li><li>The offline tool will automatically take the records of ANX-2 for the tax period from which you have navigated to the matching tool.</li></ol>"
+        ],
+        "showmore": false
+    },
+    "matchtype":{
+        "helptext": [
+            "In the exact match records, the purchase register records are hidden by default. The same can be viewed by enabling the checkbox ‘Show purchase register details’.",
+            "The records of the purchase register are displayed in italics and in grey background colour.",
+            "In case of matching result other than exact match, the fields due to which there is mismatch shall be highlighted in red colour for both the ANX-2 and Purchase register record. ",
+            "There shall be a reason column, in which the reason for mismatch shall be displayed.",
+            "The taxpayer can take action on individual document wise or by selecting all records in that particular page by enabling the radio button in action column.",
+            "Once the action has been taken, the ‘Action’ taken column shall be updated with the following words:",
+            "<table border='1' cellpadding='3px' align='center'><tr><th><b>Action</b></th><th><b>On click of relevant radio button</b>&nbsp &nbsp &nbsp </th><th><b>Action Taken</b></th></tr><tr><td>For accepting the document</td><td align='center'>Accept</td><td align='center'>Accepted</td></tr><tr><td>For rejecting the document</td><td align='center'>Reject</td><td align='center'>Rejected</td></tr><tr><td>For keeping the document pending </td><td align='center'>Pending</td> <td align='center'>Pending</td></tr></table>",
+            "The matching result along with the action taken on the documents shall be updated in the ANX-2 as well. ",
+            "<b><u>Select table:-</u></b> Taxpayer can view different tables on which matching has been done, by selecting the relevant table.",
+            "<b><u>Matching Result:-</u></b> Taxpayer can view matching result based on match and mismatch category.  ",
+            "<b><u>Match Type:- </u></b> Taxpayer can view matching result based on different bucket like Exact match, Partial match etc. ",
+            "<b><u>Search:-</u></b> Taxpayer can use this option to search, for a text/value, amount, the details of the respective table. Only the matching/relevant record shall be shown as output.",
+            "<b><u>Select number of records:-</u></b> Taxpayer can use this option to select number of records that can be displayed on one screen.",
+            "<b><u>Select columns to display/hide:- </u></b> Taxpayer can use this option to select the columns to be displayed/hidden. On selecting this option, taxpayer shall be displayed list of columns in that table and has option to deselect the columns he does not want to view",
+            "<b><u>Sorting option:-</u></b> All columns can be sorted in either ascending or descending order (A to Z, Min to Max) on click of sorting symbol.",
+            "<b><u>Filter option:-</u></b> Filter option shall be available on columns where the ‘filter’ symbol is available. The taxpayer can apply the filter option to see specific records based on such filter.",
+            "<b><u>Download:-</u></b> The detailed matching result can be downloaded in CSV format on click of this button."
+        ],
+        "showmore": true
+    },
+    "refinemat":{
+        "helptext": [
+            "<ul><li>The consolidated summary of the matching tool is displayed, bifurcated into different buckets based on the matching done on records as available across tables in ANX-2 with purchase register imported into the offline tool after applying the tolerance and/or approximation.</li><li>The table summary displays the matching for each table. You can click on hyperlink available in the table summary to see the detailed matching result for each bucket.</li><li>Each bucket is further bifurcated, if the matches is due to tolerance on tax amounts and/or approximation on document number. You can click on each hyperlink to view the details under each bucket. </li></ul>"           
+        ],
+        "showmore": false
+    },
+    "firstmatdash":{
+        "helptext": [
+            "<ol><li>Purchase register can be imported by clicking on 'Import Excel/CSV' format. It should be in the format provided on GST portal.</li><li>The purchase register should be for the same tax period from which the taxpayer has navigated to the matching tool from the GST ANX-2.</li> <li>On successful import of purchase register, the summary of the purchase register shall be displayed. </li><li>In case, there are any error in the imported purchase register, ‘Download error file’ button shall be displayed, from which the error purchase register can be downloaded.</li><li>In case of re-upload of purchase register, only the details of latest purchase register shall be updated. The records of earlier purchase register shall be removed.</li><li>Before import of purchase register, the status bar will be in amber colour. After successful import of purchase register, the status bar will change to ‘Green colour’. </li> <li>You can click on the status bar to navigate directly to the particular screen. </li></ol>"
+        ],
+        "showmore": false
+    }
+
+}
+

@@ -1,0 +1,65 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+
+.sidenav {
+    position: sticky;
+    overflow: auto;
+	background-color:#2c4e86;
+	padding-right:0;
+	
+}  
+
+.non-sidenav {
+    position: sticky;
+    overflow: auto;
+	padding-right:0;
+}
+
+.sidemenu{
+	padding-top:30px;
+	position: static;
+}
+.sidemenu a {
+   line-height: 10px;
+    font-family: verdana;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: 5px;
+    padding: 5px 5px 5px 5px;
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #17c4bb;
+}
+.reg{
+font-weight:400;
+word-wrap:break-word !important
+}
+.m-cir:after{
+content:"\f111";
+font-family:'fontAwesome';
+color:red;
+font-size:6px;
+vertical-align:super;
+padding-left:3px
+}
+ .srchbtn {
+        margin-top: 25px;
+    }
+.disableMenu {
+        position: absolute;
+        background: #eee;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        z-index: 100;
+        margin: 0 15px;
+        cursor: pointer;
+    }

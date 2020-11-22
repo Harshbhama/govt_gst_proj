@@ -1,0 +1,1706 @@
+{
+    "type": "object",
+    "title": "ANX1A Import JSON Offline Schema",
+    "comments": "Please refer masterschema.json at masterschema.zip",
+    "properties": {
+      "gstin": {
+        "description": "Supplier GSTIN",
+        "$ref": "#/definitions/gstin"
+      },
+      "rtnprd": {
+        "description": "Tax period",
+        "$ref": "#/definitions/rtnprd"
+      },
+      "amdno": {
+        "description": "Return Filling Sequence number",
+        "$ref": "#/definitions/filseq"
+      },
+      "issez": {
+        "description": "Sez Developer",
+        "$ref": "#/definitions/boolean"
+      },
+      "frq": {
+        "description": "Filling Frequency",
+        "$ref": "#/definitions/frq"
+      },
+      "profile": {
+        "description": "Profile",
+        "$ref": "#/definitions/profile"
+      },
+      "status": {
+        "description": "Status / Error Json",
+        "$ref": "#/definitions/status"
+      },
+      "chunknum": {
+        "description": "Chunk Number - incase if json file is chunked into small files",
+        "type": "number"
+      },
+      "islastchunk": {
+        "enum": [
+          "Y",
+          "N"
+        ],
+        "description": "Is last Chunk",
+        "type": "string"
+      },
+      "action": {
+        "description": "Action",
+        "$ref": "#/definitions/action"
+      },
+      "trdnm": {
+        "$ref": "#/definitions/trdnm",
+        "description": "Trade/Legal Name"
+      },
+      "b2ca": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "diffprcnt": {
+              "description": "differential percentage",
+              "$ref": "#/definitions/diffprcnt"
+            },
+            "sec7act": {
+              "description": "Supply Covered Under Sec 7 of IGST Act",
+              "$ref": "#/definitions/boolean"
+            },
+            "chksum": {
+              "$ref": "#/definitions/chksum",
+              "description": "CheckSum"
+            },
+            "rfndelg": {
+              "description": "Refund eligibility",
+              "$ref": "#/definitions/boolean"
+            },
+            "pos": {
+              "description": "Place of Supply(Name of State/UT)",
+              "$ref": "#/definitions/pos"
+            },
+            "uplddt": {
+              "description": "Upload Date",
+              "$ref": "#/definitions/uplddt"
+            },
+            "errorDetails": {
+              "additionalProperties": true,
+              "required": [
+                "errMsg",
+                "errCd"
+              ],
+              "properties": {
+                "errMsg": {
+                  "$ref": "#/definitions/errMsg",
+                  "description": "Error Message"
+                },
+                "errCd": {
+                  "$ref": "#/definitions/errCd",
+                  "description": "Error Code"
+                }
+              },
+              "type": "object"
+            },
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "txval": {
+                    "description": "Taxable Value (₹)",
+                    "$ref": "#/definitions/negtxval"
+                  },
+                  "rate": {
+                    "description": "Rate (%)",
+                    "$ref": "#/definitions/rate"
+                  },
+                  "igst": {
+                    "description": "Integrated Tax (₹)",
+                    "$ref": "#/definitions/negigst"
+                  },
+                  "sgst": {
+                    "description": "State/UT Tax (₹)",
+                    "$ref": "#/definitions/negsgst"
+                  },
+                  "cgst": {
+                    "description": "Central Tax (₹)",
+                    "$ref": "#/definitions/negcgst"
+                  },
+                  "cess": {
+                    "description": "Cess (₹)",
+                    "$ref": "#/definitions/negcess"
+                  }
+                },
+                "required": [
+                  "txval",
+                  "rate"
+                ]
+              }
+            }
+          },
+          "anyOf": [
+            {
+              "required": [
+                "pos",
+                "items"
+              ]
+            },
+            {
+              "required": [
+                "pos",
+                "flag"
+              ]
+            }
+          ]
+        }
+      },
+      "ecoma": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "etin": {
+              "description": "E-commerce GSTIN",
+              "$ref": "#/definitions/etin"
+            },
+            "trdnm": {
+              "$ref": "#/definitions/trdnm",
+              "description": "Trade/Legal Name"
+            },
+            "uplddt": {
+              "description": "Upload Date",
+              "$ref": "#/definitions/uplddt"
+            },
+            "chksum": {
+              "$ref": "#/definitions/chksum",
+              "description": "CheckSum"
+            },
+            "errorDetails": {
+              "additionalProperties": true,
+              "required": [
+                "errMsg",
+                "errCd"
+              ],
+              "properties": {
+                "errMsg": {
+                  "$ref": "#/definitions/errMsg",
+                  "description": "Error Message"
+                },
+                "errCd": {
+                  "$ref": "#/definitions/errCd",
+                  "description": "Error Code"
+                }
+              },
+              "type": "object"
+            },
+            "sup": {
+              "description": "supplied amount",
+              "$ref": "#/definitions/amt"
+            },
+            "supr": {
+              "description": "supplies returned amount",
+              "$ref": "#/definitions/amt"
+            },
+            "nsup": {
+              "description": "net supplied amount",
+              "$ref": "#/definitions/negamt"
+            },
+            "igst": {
+              "description": "Integrated Tax (₹)",
+              "$ref": "#/definitions/negigst"
+            },
+            "sgst": {
+              "description": "State/UT Tax (₹)",
+              "$ref": "#/definitions/negsgst"
+            },
+            "cgst": {
+              "description": "Central Tax (₹)",
+              "$ref": "#/definitions/negcgst"
+            },
+            "cess": {
+              "description": "Cess (₹)",
+              "$ref": "#/definitions/negcess"
+            }
+          },
+          "anyOf": [
+            {
+              "required": [
+                "etin",
+                "sup",
+                "supr",
+                "nsup"
+              ]
+            },
+            {
+              "required": [
+                "etin",
+                "flag",
+                "sup",
+                "supr",
+                "nsup"
+              ]
+            }
+          ]
+        }
+      },
+      "expwopa": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "chksum": {
+              "$ref": "#/definitions/chksum",
+              "description": "CheckSum"
+            },
+            "doctyp": {
+              "description": "type of document",
+              "$ref": "#/definitions/doctyp"
+            },
+            "odoctyp": {
+              "description": "Original Document Type",
+              "$ref": "#/definitions/doctyp"
+            },
+            "rfndelg": {
+              "description": "Refund eligibility",
+              "$ref": "#/definitions/boolean"
+            },
+            "doc_status": {
+              "description": "Action taken on the document",
+              "$ref": "#/definitions/doc_status"
+            },
+            "uplddt": {
+              "description": "Upload Date",
+              "$ref": "#/definitions/uplddt"
+            },
+            "errorDetails": {
+              "additionalProperties": true,
+              "required": [
+                "errMsg",
+                "errCd"
+              ],
+              "properties": {
+                "errMsg": {
+                  "$ref": "#/definitions/errMsg",
+                  "description": "Error Message"
+                },
+                "errCd": {
+                  "$ref": "#/definitions/errCd",
+                  "description": "Error Code"
+                }
+              },
+              "type": "object"
+            },
+            "sb": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "num": {
+                  "description": "Shipping bill number",
+                  "$ref": "#/definitions/sbnum"
+                },
+                "pcode": {
+                  "description": "port code",
+                  "$ref": "#/definitions/pcode"
+                },
+                "dt": {
+                  "description": "Shipping bill date",
+                  "$ref": "#/definitions/date"
+                }
+              },
+              "required": [
+                "num",
+                "pcode",
+                "dt"
+              ]
+            },
+            "doc": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "num": {
+                  "description": "Document number",
+                  "$ref": "#/definitions/docnum"
+                },
+                "dt": {
+                  "description": "Document date",
+                  "type": "string"
+                },
+                "val": {
+                  "description": "Document value",
+                  "$ref": "#/definitions/amt"
+                }
+              },
+              "required": [
+                "num",
+                "dt",
+                "val"
+              ]
+            },
+            "odoc": {
+              "type": "object",
+              "properties": {
+                "num": {
+                  "description": "Original Invoice Number",
+                  "$ref": "#/definitions/odocnum"
+                },
+                "dt": {
+                  "description": "Original Date",
+                  "$ref": "#/definitions/date"
+                }
+              },
+              "required": [
+                "num",
+                "dt"
+              ]
+            },
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "hsn": {
+                    "description": "HSN code",
+                    "$ref": "#/definitions/hsn"
+                  },
+                  "txval": {
+                    "description": "Taxable Value (₹)",
+                    "$ref": "#/definitions/txval"
+                  },
+                  "rate": {
+                    "description": "Rate (%)",
+                    "$ref": "#/definitions/rate"
+                  }
+                },
+                "required": [
+                  "txval",
+                  "rate"
+                ]
+              }
+            }
+          },
+          "anyOf": [
+            {
+              "required": [
+                "doctyp",
+                "odoctyp",
+                "doc",
+                "odoc",
+                "items"
+              ]
+            },
+            {
+              "required": [
+                "doctyp",
+                "odoctyp",
+                "doc",
+                "odoc",
+                "flag"
+              ]
+            }
+          ]
+        }
+      },
+      "expwpa": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "chksum": {
+              "$ref": "#/definitions/chksum",
+              "description": "CheckSum"
+            },
+            "doctyp": {
+              "description": "type of document",
+              "$ref": "#/definitions/doctyp"
+            },
+            "odoctyp": {
+              "description": "Original Document Type",
+              "$ref": "#/definitions/doctyp"
+            },
+            "rfndelg": {
+              "description": "Refund eligibility",
+              "$ref": "#/definitions/boolean"
+            },
+            "doc_status": {
+              "description": "Action taken on the document",
+              "$ref": "#/definitions/doc_status"
+            },
+            "uplddt": {
+              "description": "Upload Date",
+              "$ref": "#/definitions/uplddt"
+            },
+            "errorDetails": {
+              "additionalProperties": true,
+              "required": [
+                "errMsg",
+                "errCd"
+              ],
+              "properties": {
+                "errMsg": {
+                  "$ref": "#/definitions/errMsg",
+                  "description": "Error Message"
+                },
+                "errCd": {
+                  "$ref": "#/definitions/errCd",
+                  "description": "Error Code"
+                }
+              },
+              "type": "object"
+            },
+            "doc": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "num": {
+                  "description": "Document number",
+                  "$ref": "#/definitions/docnum"
+                },
+                "dt": {
+                  "description": "Document date",
+                  "$ref": "#/definitions/date"
+                },
+                "val": {
+                  "description": "Document value",
+                  "$ref": "#/definitions/amt"
+                }
+              },
+              "required": [
+                "num",
+                "dt",
+                "val"
+              ]
+            },
+            "odoc": {
+              "type": "object",
+              "properties": {
+                "num": {
+                  "description": "Original Invoice Number",
+                  "$ref": "#/definitions/odocnum"
+                },
+                "dt": {
+                  "description": "Original Date",
+                  "$ref": "#/definitions/date"
+                }
+              },
+              "required": [
+                "num",
+                "dt"
+              ]
+            },
+            "sb": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "num": {
+                  "description": "Shipping bill number",
+                  "$ref": "#/definitions/sbnum"
+                },
+                "pcode": {
+                  "description": "port code",
+                  "$ref": "#/definitions/pcode"
+                },
+                "dt": {
+                  "description": "Shipping bill date",
+                  "$ref": "#/definitions/date"
+                }
+              },
+              "required": [
+                "num",
+                "pcode",
+                "dt"
+              ]
+            },
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "hsn": {
+                    "description": "HSN code",
+                    "$ref": "#/definitions/hsn"
+                  },
+                  "txval": {
+                    "description": "Taxable Value (₹)",
+                    "$ref": "#/definitions/txval"
+                  },
+                  "rate": {
+                    "description": "Rate (%)",
+                    "$ref": "#/definitions/rate"
+                  },
+                  "igst": {
+                    "description": "Integrated Tax (₹)",
+                    "$ref": "#/definitions/igst"
+                  },
+                  "cess": {
+                    "description": "Cess (₹)",
+                    "$ref": "#/definitions/cess"
+                  }
+                },
+                "required": [
+                  "hsn",
+                  "txval",
+                  "rate",
+                  "igst"
+                ]
+              }
+            }
+          },
+          "anyOf": [
+            {
+              "required": [
+                "doctyp",
+                "odoctyp",
+                "doc",
+                "odoc",
+                "items"
+              ]
+            },
+            {
+              "required": [
+                "doctyp",
+                "odoctyp",
+                "doc",
+                "odoc",
+                "flag"
+              ]
+            }
+          ]
+        }
+      },
+      "impga": {
+        "minItems": 1,
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "pos": {
+              "description": "Place of Supply(Name of State/UT)",
+              "$ref": "#/definitions/pos"
+            },
+            "docs": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "chksum": {
+                    "$ref": "#/definitions/chksum",
+                    "description": "CheckSum"
+                  },
+                  "doctyp": {
+                    "description": "type of document",
+                    "$ref": "#/definitions/impgdoctyp"
+                  },
+                  "odoctyp": {
+                    "description": "Original Document Type",
+                    "$ref": "#/definitions/impgdoctyp"
+                  },
+                  "uplddt": {
+                    "description": "Upload Date",
+                    "$ref": "#/definitions/uplddt"
+                  },
+                  "errorDetails": {
+                    "additionalProperties": true,
+                    "required": [
+                      "errMsg",
+                      "errCd"
+                    ],
+                    "properties": {
+                      "errMsg": {
+                        "$ref": "#/definitions/errMsg",
+                        "description": "Error Message"
+                      },
+                      "errCd": {
+                        "$ref": "#/definitions/errCd",
+                        "description": "Error Code"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "doc_status": {
+                    "description": "Action taken on the document",
+                    "$ref": "#/definitions/doc_status"
+                  },
+                  "boe": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "num": {
+                        "description": "Bill of entry",
+                        "$ref": "#/definitions/boenum"
+                      },
+                      "pcode": {
+                        "description": "port code",
+                        "$ref": "#/definitions/pcode"
+                      },
+                      "dt": {
+                        "description": "Bill date",
+                        "$ref": "#/definitions/date"
+                      },
+                      "val": {
+                        "description": "Bill value",
+                        "$ref": "#/definitions/amt"
+                      }
+                    },
+                    "required": [
+                      "num",
+                      "pcode",
+                      "dt",
+                      "val"
+                    ]
+                  },
+                  "oboe": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "num": {
+                        "description": "Original Bill of entry",
+                        "$ref": "#/definitions/oboenum"
+                      },
+                      "pcode": {
+                        "description": "Original port code",
+                        "$ref": "#/definitions/pcode"
+                      },
+                      "dt": {
+                        "description": "Original Bill date",
+                        "$ref": "#/definitions/date"
+                      }
+                    },
+                    "required": [
+                      "num",
+                      "pcode",
+                      "dt"
+                    ]
+                  },
+                  "items": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "hsn": {
+                          "description": "HSN code",
+                          "$ref": "#/definitions/hsn"
+                        },
+                        "txval": {
+                          "description": "Taxable Value (₹)",
+                          "$ref": "#/definitions/postxval"
+                        },
+                        "rate": {
+                          "description": "Rate (%)",
+                          "$ref": "#/definitions/rate"
+                        },
+                        "igst": {
+                          "description": "Integrated Tax (₹)",
+                          "$ref": "#/definitions/igst"
+                        },
+                        "cess": {
+                          "description": "Cess (₹)",
+                          "$ref": "#/definitions/cess"
+                        }
+                      },
+                      "required": [
+                        "hsn",
+                        "txval",
+                        "rate",
+                        "igst"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "doctyp",
+                  "odoctyp",
+                  "boe",
+                  "oboe",
+                  "items"
+                ]
+              }
+            }
+          },
+          "anyOf": [
+            {
+              "required": [
+                "pos",
+                "docs"
+              ]
+            },
+            {
+              "required": [
+                "pos",
+                "docs",
+                "flag"
+              ]
+            }
+          ]
+        }
+      },
+      "impgseza": {
+        "minItems": 1,
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "uplddt": {
+              "description": "Upload Date",
+              "$ref": "#/definitions/uplddt"
+            },
+            "ctin": {
+              "description": "Counter Party GST",
+              "$ref": "#/definitions/ctin"
+            },
+            "trdnm": {
+              "$ref": "#/definitions/trdnm",
+              "description": "Trade/Legal Name"
+            },
+            "otrdnm": {
+              "$ref": "#/definitions/trdnm",
+              "description": "Trade/Legal Name"
+            },
+            "octin": {
+              "description": "Original Counter Party GST",
+              "$ref": "#/definitions/octin"
+            },
+            "docs": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "doctyp": {
+                    "description": "type of document",
+                    "$ref": "#/definitions/impgdoctyp"
+                  },
+                  "odoctyp": {
+                    "description": "Original Document Type",
+                    "$ref": "#/definitions/impgdoctyp"
+                  },
+                  "doc_status": {
+                    "description": "Action taken on the document",
+                    "$ref": "#/definitions/doc_status"
+                  },
+                  "uplddt": {
+                    "description": "Upload Date",
+                    "$ref": "#/definitions/uplddt"
+                  },
+                  "errorDetails": {
+                    "additionalProperties": true,
+                    "required": [
+                      "errMsg",
+                      "errCd"
+                    ],
+                    "properties": {
+                      "errMsg": {
+                        "$ref": "#/definitions/errMsg",
+                        "description": "Error Message"
+                      },
+                      "errCd": {
+                        "$ref": "#/definitions/errCd",
+                        "description": "Error Code"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "rfndelg": {
+                    "description": "Flag indicating whether document to be auto-populated to refunds",
+                    "$ref": "#/definitions/boolean"
+                  },
+                  "pos": {
+                    "description": "point of sale ",
+                    "$ref": "#/definitions/pos"
+                  },
+                  "boe": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "num": {
+                        "description": "Bill of entry",
+                        "$ref": "#/definitions/boenum"
+                      },
+                      "pcode": {
+                        "description": "port code",
+                        "$ref": "#/definitions/pcode"
+                      },
+                      "dt": {
+                        "description": "Bill date",
+                        "$ref": "#/definitions/date"
+                      },
+                      "val": {
+                        "description": "Bill value",
+                        "$ref": "#/definitions/amt"
+                      }
+                    },
+                    "required": [
+                      "num",
+                      "pcode",
+                      "dt",
+                      "val"
+                    ]
+                  },
+                  "oboe": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "num": {
+                        "description": "Original Bill of entry",
+                        "$ref": "#/definitions/oboenum"
+                      },
+                      "pcode": {
+                        "description": "Original port code",
+                        "$ref": "#/definitions/pcode"
+                      },
+                      "dt": {
+                        "description": "Original Bill date",
+                        "$ref": "#/definitions/date"
+                      }
+                    },
+                    "required": [
+                      "num",
+                      "pcode",
+                      "dt"
+                    ]
+                  },
+                  "items": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "hsn": {
+                          "description": "HSN code",
+                          "$ref": "#/definitions/hsn"
+                        },
+                        "txval": {
+                          "description": "Taxable Value (₹)",
+                          "$ref": "#/definitions/postxval"
+                        },
+                        "rate": {
+                          "description": "Rate (%)",
+                          "$ref": "#/definitions/rate"
+                        },
+                        "igst": {
+                          "description": "Integrated Tax (₹)",
+                          "$ref": "#/definitions/igst"
+                        },
+                        "cess": {
+                          "description": "Cess (₹)",
+                          "$ref": "#/definitions/cess"
+                        }
+                      },
+                      "required": [
+                        "hsn",
+                        "txval",
+                        "rate",
+                        "igst"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "doctyp",
+                  "odoctyp",
+                  "pos",
+                  "boe",
+                  "oboe",
+                  "items"
+                ]
+              }
+            }
+          },
+          "anyOf": [
+            {
+              "required": [
+                "ctin",
+                "octin",
+                "docs"
+              ]
+            },
+            {
+              "required": [
+                "ctin",
+                "octin",
+                "docs",
+                "flag"
+              ]
+            }
+          ]
+        }
+      },
+      "impsa": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "chksum": {
+              "$ref": "#/definitions/chksum",
+              "description": "CheckSum"
+            },
+            "pos": {
+              "description": "Place of Supply(Name of State/UT)",
+              "$ref": "#/definitions/pos"
+            },
+            "rfndelg": {
+              "description": "Refund eligibility",
+              "$ref": "#/definitions/boolean"
+            },
+            "uplddt": {
+              "description": "Upload Date",
+              "$ref": "#/definitions/uplddt"
+            },
+            "errorDetails": {
+              "additionalProperties": true,
+              "required": [
+                "errMsg",
+                "errCd"
+              ],
+              "properties": {
+                "errMsg": {
+                  "$ref": "#/definitions/errMsg",
+                  "description": "Error Message"
+                },
+                "errCd": {
+                  "$ref": "#/definitions/errCd",
+                  "description": "Error Code"
+                }
+              },
+              "type": "object"
+            },
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "hsn": {
+                    "description": "HSN code",
+                    "$ref": "#/definitions/impshsn"
+                  },
+                  "txval": {
+                    "description": "Taxable Value (₹)",
+                    "$ref": "#/definitions/negtxval"
+                  },
+                  "rate": {
+                    "description": "Rate (%)",
+                    "$ref": "#/definitions/rate"
+                  },
+                  "igst": {
+                    "description": "Integrated Tax (₹)",
+                    "$ref": "#/definitions/negigst"
+                  },
+                  "cess": {
+                    "description": "Cess (₹)",
+                    "$ref": "#/definitions/negcess"
+                  }
+                },
+                "required": [
+                  "hsn",
+                  "txval",
+                  "rate",
+                  "igst"
+                ]
+              }
+            }
+          },
+          "anyOf": [
+            {
+              "required": [
+                "pos",
+                "items"
+              ]
+            },
+            {
+              "required": [
+                "pos",
+                "flag"
+              ]
+            }
+          ]
+        }
+      },
+      "reva": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "ctin": {
+              "description": "Counterparty GSTIN",
+              "type": "string",
+              "$ref": "#/definitions/ctin"
+            },
+            "trdnm": {
+              "type": "string",
+              "description": "Trade/Legal Name"
+            },
+            "type": {
+              "description": "GSTIN or PAN type",
+              "type": "string"
+            },
+            "docs": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "chksum": {
+                    "$ref": "#/definitions/chksum",
+                    "description": "CheckSum"
+                  },
+                  "diffprcnt": {
+                    "description": "differential percentage",
+                    "$ref": "#/definitions/diffprcnt"
+                  },
+                  "sec7act": {
+                    "description": "Supply Covered Under Sec 7 of IGST Act",
+                    "$ref": "#/definitions/boolean"
+                  },
+                  "rfndelg": {
+                    "description": "Refund eligibility",
+                    "$ref": "#/definitions/boolean"
+                  },
+                  "uplddt": {
+                    "description": "Upload Date",
+                    "$ref": "#/definitions/uplddt"
+                  },
+                  "errorDetails": {
+                    "additionalProperties": true,
+                    "required": [
+                      "errMsg",
+                      "errCd"
+                    ],
+                    "properties": {
+                      "errMsg": {
+                        "$ref": "#/definitions/errMsg",
+                        "description": "Error Message"
+                      },
+                      "errCd": {
+                        "$ref": "#/definitions/errCd",
+                        "description": "Error Code"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "pos": {
+                    "description": "Place of Supply(Name of State/UT)",
+                    "$ref": "#/definitions/pos"
+                  },
+                  "suptyp": {
+                    "description": "Supply type",
+                    "$ref": "#/definitions/revsuptyp"
+                  },
+                  "items": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "hsn": {
+                          "description": "HSN code",
+                          "$ref": "#/definitions/hsn"
+                        },
+                        "txval": {
+                          "description": "Taxable Value (₹)",
+                          "$ref": "#/definitions/negtxval"
+                        },
+                        "rate": {
+                          "description": "Rate (%)",
+                          "$ref": "#/definitions/rate"
+                        },
+                        "igst": {
+                          "description": "Integrated Tax (₹)",
+                          "$ref": "#/definitions/negigst"
+                        },
+                        "sgst": {
+                          "description": "State/UT Tax (₹)",
+                          "$ref": "#/definitions/negsgst"
+                        },
+                        "cgst": {
+                          "description": "Central Tax (₹)",
+                          "$ref": "#/definitions/negcgst"
+                        },
+                        "cess": {
+                          "description": "Cess (₹)",
+                          "$ref": "#/definitions/negcess"
+                        }
+                      },
+                      "required": [
+                        "txval",
+                        "rate"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "pos",
+                  "items"
+                ]
+              }
+            }
+          },
+          "anyOf": [
+            {
+              "required": [
+                "ctin",
+                "docs",
+                "type"
+              ]
+            },
+            {
+              "required": [
+                "ctin",
+                "docs",
+                "type",
+                "flag"
+              ]
+            }
+          ]
+        },
+        "anyOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "ctin": {
+                "description": "Counterparty GSTIN",
+                "$ref": "#/definitions/ctin"
+              },
+              "type": {
+                "description": "GSTIN type",
+                "$ref": "#/definitions/revctintypeG"
+              },
+              "docs": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "not": {
+                    "required": [
+                      "suptyp"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "ctin": {
+                "description": "CounterParty PAN",
+                "$ref": "#/definitions/pan"
+              },
+              "type": {
+                "description": "PAN type",
+                "$ref": "#/definitions/revctintypeP"
+              },
+              "docs": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "suptyp"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "required": [
+      "gstin",
+      "rtnprd"
+    ],
+    "anyOf": [
+      {
+        "required": [
+          "b2ca"
+        ]
+      },
+      {
+        "required": [
+          "expwpa"
+        ]
+      },
+      {
+        "required": [
+          "expwopa"
+        ]
+      },
+      {
+        "required": [
+          "reva"
+        ]
+      },
+      {
+        "required": [
+          "impsa"
+        ]
+      },
+      {
+        "required": [
+          "impga"
+        ]
+      },
+      {
+        "required": [
+          "impgseza"
+        ]
+      },
+      {
+        "required": [
+          "ecoma"
+        ]
+      }
+    ],
+    "definitions": {
+      "nonEmptyString": {
+        "type": "string",
+        "pattern": "^[a-zA-Z0-9]*$",
+        "minLength": 1
+      },
+      "amt": {
+        "type": "number",
+        "multipleOf": 0.01,
+        "maximum": 9999999999999.99,
+        "minimum": 0
+      },
+      "negamt": {
+        "type": "number",
+        "multipleOf": 0.01,
+        "maximum": 9999999999999.99,
+        "minimum": -9999999999999.99
+      },
+      "cgst": {
+        "type": "number",
+        "multipleOf": 0.01,
+        "maximum": 9999999999999.99,
+        "minimum": 0
+      },
+      "sgst": {
+        "type": "number",
+        "multipleOf": 0.01,
+        "maximum": 9999999999999.99,
+        "minimum": 0
+      },
+      "igst": {
+        "type": "number",
+        "multipleOf": 0.01,
+        "maximum": 9999999999999.99,
+        "minimum": 0
+      },
+      "cess": {
+        "type": "number",
+        "multipleOf": 0.01,
+        "maximum": 9999999999999.99,
+        "minimum": 0
+      },
+      "txval": {
+        "type": "number",
+        "multipleOf": 0.01,
+        "maximum": 9999999999999.99,
+        "minimum": 0
+      },
+      "postxval": {
+        "type": "number",
+        "multipleOf": 0.01,
+        "maximum": 9999999999999.99,
+        "minimum": 0.01
+      },
+      "negcgst": {
+        "type": "number",
+        "multipleOf": 0.01,
+        "minimum": -9999999999999.99,
+        "maximum": 9999999999999.99
+      },
+      "negsgst": {
+        "type": "number",
+        "multipleOf": 0.01,
+        "minimum": -9999999999999.99,
+        "maximum": 9999999999999.99
+      },
+      "negigst": {
+        "type": "number",
+        "multipleOf": 0.01,
+        "minimum": -9999999999999.99,
+        "maximum": 9999999999999.99
+      },
+      "negcess": {
+        "type": "number",
+        "multipleOf": 0.01,
+        "minimum": -9999999999999.99,
+        "maximum": 9999999999999.99
+      },
+      "negtxval": {
+        "type": "number",
+        "multipleOf": 0.01,
+        "minimum": -9999999999999.99,
+        "maximum": 9999999999999.99
+      },
+      "hsn": {
+        "type": "string",
+        "maxLength": 8,
+        "minLength": 4,
+        "pattern": "^[0-9]*$"
+      },
+      "impshsn": {
+        "type": "string",
+        "maxLength": 8,
+        "minLength": 6,
+        "pattern": "^99[0-9]*$"
+      },
+      "rate": {
+        "type": "number",
+        "multipleOf": 0.01,
+        "maximum": 999.9,
+        "minimum": 0
+      },
+      "filseq": {
+        "type": "number",
+        "maximum": 2,
+        "minimum": 0
+      },
+      "date": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^(0[1-9]|1[0-9]|2[0-8]|29((?=\/([0][13-9]|1[0-2])|(?=\/(0[1-9]|1[0-2])\/([0-9]{2}(0[48]|[13579][26]|[2468][048])|([02468][048]|[13579][26])00))))|30(?=\/(0[13-9]|1[0-2]))|31(?=\/(0[13578]|1[02])))\/(0[1-9]|1[0-2])\/[0-9]{4}$"
+      },
+      "gstin": {
+        "type": "string",
+        "maxLength": 15,
+        "minLength": 15,
+        "pattern": "[0-9]{2}[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[Zz1-9A-Ja-j]{1}[0-9a-zA-Z]{1}"
+      },
+      "rtnprd": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^((0[1-9]|1[012])((19|20)\\d\\d))$"
+      },
+      "ctin": {
+        "anyOf": [
+          {
+            "type": "string",
+            "maxLength": 15,
+            "minLength": 15,
+            "pattern": "[0-9]{2}[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[Zz1-9A-Ja-j]{1}[0-9a-zA-Z]{1}"
+          },
+          {
+            "type": "string",
+            "maxLength": 15,
+            "minLength": 15,
+            "pattern": "[0-9]{4}[A-Z]{3}[0-9]{5}[UO]{1}[N][A-Z0-9]{1}"
+          },
+          {
+            "type": "string",
+            "maxLength": 10,
+            "minLength": 10,
+            "pattern": "[A-Z]{5}[0-9]{4}[A-Z]{1}"
+          }
+        ]
+      },
+      "etin": {
+        "type": "string",
+        "maxLength": 15,
+        "minLength": 15,
+        "pattern": "[0-9]{2}[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[C]{1}[0-9a-zA-Z]{1}"
+      },
+      "pan": {
+        "type": "string",
+        "maxLength": 10,
+        "minLength": 10,
+        "pattern": "[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}"
+      },
+      "etinEmptyChck": {
+        "type": "string",
+        "maxLength": 0,
+        "minLength": 0
+      },
+      "chksum": {
+        "type": "string",
+        "pattern": "^[a-zA-Z0-9]+$",
+        "minLength": 64,
+        "maxLength": 64
+      },
+      "num": {
+        "type": "string",
+        "maxLength": 16,
+        "minLength": 1,
+        "pattern": "^(?!0*$)[a-zA-Z0-9-/]+$"
+      },
+      "sbnum": {
+        "anyOf": [
+          {
+            "description": "Shipping Bill No. or Bill of Export No.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 16,
+            "pattern": "^(?!0*$)[a-zA-Z0-9-/]+$"
+          },
+          {
+            "description": "Shipping Bill No. or Bill of Export No.",
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 0
+          }
+        ]
+      },
+      "docnum": {
+        "type": "string",
+        "maxLength": 16,
+        "minLength": 1,
+        "pattern": "^(?!0*$)[a-zA-Z0-9-/]+$"
+      },
+      "odocnum": {
+        "type": "string",
+        "maxLength": 16,
+        "minLength": 1,
+        "pattern": "^(?!0*$)[a-zA-Z0-9-/]+$"
+      },
+      "pos": {
+        "type": "string",
+        "pattern": "^(3[0-7]|(?!28)[12][0-9]|0[1-9]|97)$",
+        "maxLength": 2,
+        "minLength": 2
+      },
+      "boenum": {
+        "type": "string",
+        "Length": 7
+      },
+      "oboenum": {
+        "type": "string",
+        "Length": 7
+      },
+      "pcode": {
+        "type": "string",
+        "maxLength": 6,
+        "minLength": 1,
+        "pattern": "^[a-zA-Z0-9]+$"
+      },
+      "flag": {
+        "type": "string",
+        "enum": [
+          "N",
+          "U"
+        ]
+      },
+      "boolean": {
+        "type": "string",
+        "enum": [
+          "Y",
+          "N"
+        ]
+      },
+      "diffprcnt": {
+        "type": "number",
+        "enum": [
+          0.65,
+          1.00,
+          1
+        ]
+      },
+      "doctyp": {
+        "type": "string",
+        "enum": [
+          "I",
+          "C",
+          "D"
+        ]
+      },
+      "impgdoctyp": {
+        "type": "string",
+        "enum": [
+          "B"
+        ]
+      },
+      "tblref": {
+        "type": "string",
+        "enum": [
+          "3E",
+          "3F",
+          "3G"
+        ]
+      },
+      "cfs": {
+        "type": "string",
+        "enum": [
+          "NF",
+          "F"
+        ]
+      },
+      "revctintypeG": {
+        "type": "string",
+        "enum": [
+          "G"
+        ]
+      },
+      "revctintypeP": {
+        "type": "string",
+        "enum": [
+          "P"
+        ]
+      },
+      "revsuptyp": {
+        "type": "string",
+        "enum": [
+          "inter",
+          "intra"
+        ]
+      },
+      "itcent": {
+        "type": "string",
+        "enum": [
+          "Y",
+          "N"
+        ]
+      },
+      "doc_action": {
+        "type": "string",
+        "enum": [
+          "A",
+          "R",
+          "P",
+          "N"
+        ]
+      },
+      "doc_status": {
+        "type": "string",
+        "enum": [
+          "I"
+        ]
+      },
+      "action": {
+        "type": "string",
+        "minLength": 1
+      },
+      "odoctyp": {
+        "type": "string",
+        "enum": [
+          "I",
+          "C",
+          "D"
+        ]
+      },
+      "amdtyp": {
+        "type": "string",
+        "enum": [
+          "G",
+          "D",
+          "O"
+        ]
+      },
+      "aprd": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^((0[1-9]|1[012])((19|20)\\d\\d))$"
+      },
+      "oprd": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^((0[1-9]|1[012])((19|20)\\d\\d))$"
+      },
+      "oetin": {
+        "type": "string",
+        "maxLength": 15,
+        "minLength": 15,
+        "pattern": "[0-9]{2}[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[C]{1}[0-9a-zA-Z]{1}"
+      },
+      "amended": {
+        "type": "string",
+        "enum": [
+          "Y",
+          "N"
+        ]
+      },
+      "summtyp": {
+        "type": "string",
+        "enum": [
+          "L",
+          "H"
+        ]
+      },
+      "frq": {
+        "type": "string",
+        "enum": [
+          "M",
+          "Q"
+        ]
+      },
+      "profile": {
+        "type": "string",
+        "enum": [
+          "SJ",
+          "SM",
+          "QN",
+          "MN"
+        ]
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "P",
+          "ER",
+          "PE"
+        ]
+      },
+      "errMsg": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "errCd": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "trdnm": {
+        "type": "string"
+      },
+      "uplddt": {
+        "type": "string"
+      },
+      "ref_id": {
+        "type": "string",
+        "maxLength": 15
+      },
+      "lastSummaryTs": {
+        "type": "string"
+      },
+      "octin": {
+        "anyOf": [
+          {
+            "type": "string",
+            "maxLength": 15,
+            "minLength": 15,
+            "pattern": "[0-9]{2}[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[Zz1-9A-Ja-j]{1}[0-9a-zA-Z]{1}"
+          },
+          {
+            "type": "string",
+            "maxLength": 15,
+            "minLength": 15,
+            "pattern": "[0-9]{4}[A-Z]{3}[0-9]{5}[UO]{1}[N][A-Z0-9]{1}"
+          }
+        ]
+      }
+    }
+  }

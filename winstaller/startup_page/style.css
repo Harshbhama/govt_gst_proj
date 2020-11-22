@@ -1,0 +1,84 @@
+
+html, body, header, main, footer, div, p, img, h2 {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.banner {
+    background-color:  #0B1E59;
+    display: flex;
+}
+
+.banner img {
+    height: 75px;
+    margin: .5% 0% .5% 2%;
+}
+
+.banner p {
+    color: white;    
+    font-size: 2.5rem;
+    margin: 1.4% 0% 1.4% 3%;
+}
+
+
+.info {
+    margin-top: 50px;
+    padding-left: 32px;
+    visibility: hidden;
+}
+
+.info .info-txt {
+    margin: 12px 0px 37px 7px;
+    font-size: 1.125rem;
+}
+
+
+.button-01 {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin: 12px;        
+}
+
+.button-01-content {
+    background-color: #3985b6;    
+    min-height: 42px;
+    text-align: center;    
+    border-radius: 5px;
+    padding: 2px 17px;
+    box-shadow: 2px 2px 4px black;    
+}
+
+.button-01-content:hover {
+    background-color: #2d6386;
+    box-shadow: 3px 3px 6px black;
+}
+
+.button-01-content p{
+    margin: 0;
+}
+
+main {
+    position: relative;
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 37%;
+    color: rgb(24, 119, 67);
+    text-align: center;
+}
+
+.spinner p {
+    font-weight: bold;
+    font-size: 1.125rem;       
+}
+
+.spinner img {
+    height: 60px;
+    margin-top: 12px;
+}
+
+
+
